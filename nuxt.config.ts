@@ -3,5 +3,50 @@ export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
   css: ["~/assets/css/tailwind.css"],
-  modules: ["@nuxtjs/tailwindcss", "@nuxt/image"],
+  modules: [
+    "@nuxtjs/tailwindcss",
+    "@nuxt/image",
+    "@nuxtjs/color-mode",
+    "@nuxt/icon",
+  ],
+  colorMode: {
+    preference: "dark", // default value of $colorMode.preference. could be system as well
+    fallback: "light", // fallback value if not system preference found
+    hid: "nuxt-color-mode-script",
+    globalName: "__NUXT_COLOR_MODE__",
+    componentName: "ColorScheme",
+    storage: "localStorage", // or 'sessionStorage' or 'cookie'
+    storageKey: "nuxt-color-mode",
+  },
+  icon: {
+    // provider: "server",
+    // customCollections: [
+    //   {
+    //     prefix: "local",
+    //     dir: "~/assets/svg-icons",
+    //   },
+    // ],
+  },
+  app: {
+    head: {
+      link: [
+        {
+          rel: "preconnect",
+          href: "https://fonts.googleapis.com",
+        },
+        {
+          rel: "preconnect",
+          href: "https://fonts.gstatic.com",
+          crossorigin: "anonymous", // ✅ Use lowercase "crossorigin"
+        },
+        {
+          rel: "stylesheet",
+          href: "https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap",
+        },
+      ],
+      // bodyAttrs: {
+      //   class: "dark:bg-primary-dark",
+      // },
+    },
+  },
 });
