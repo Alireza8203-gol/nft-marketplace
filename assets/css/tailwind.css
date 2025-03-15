@@ -4,6 +4,6 @@
 
 @layer utilities {
   body {
-    @apply bg-primary-light dark:bg-primary-dark font-workSans;
+    @apply bg-primary-light dark:bg-primary-dark font-workSans text-primary-dark dark:text-white;
   }
 }

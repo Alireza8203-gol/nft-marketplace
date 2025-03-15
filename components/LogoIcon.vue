@@ -1,12 +1,5 @@
 <template>
-  <svg
-    fill="none"
-    :width="width"
-    :height="height"
-    viewBox="0 0 244 32"
-    :class="props.textColorClass"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+  <svg fill="none" viewBox="0 0 244 32" xmlns="http://www.w3.org/2000/svg">
     <path
       fill="#A259FF"
       fill-rule="evenodd"
@@ -96,19 +89,6 @@
   </svg>
 </template>
 
-<script setup lang="ts">
-const props = defineProps({
-  width: {
-    type: Number,
-  },
-  height: {
-    type: Number,
-  },
-  textColorClass: {
-    type: String,
-    default: "text-white",
-  },
-});
-</script>
+<script setup lang="ts"></script>
 
 <style scoped></style>

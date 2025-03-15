@@ -1,30 +1,33 @@
 <template>
   <nav>
     <div
-      class="flex items-center justify-between my-[15px] md:my-5 mx-[30px] sm:mx-[50px] text-primary-dark dark:text-white font-semibold"
+      class="flex items-center justify-between py-[15px] desktop:py-5 px-7.5 table:px-[50px] text-primary-dark dark:text-white font-semibold"
     >
       <LogoIcon
-        :width="182.56"
-        :height="24"
-        text-color-class="text-primary-dark dark:text-white"
+        class="w-[182.56px] h-6 desktop:w-[243.41px] desktop:h-8 text-primary-dark dark:text-white"
       />
-      <ul class="flex items-center justify-center space-x-2.5">
-        <li><a href="#">Marketplace</a></li>
-        <li><a href="#">Rankings</a></li>
-        <li><a href="#">Connect a wallet</a></li>
-        <li>
-          <a
-            href="#"
-            class="flex items-center justify-center space-x-3 py-5 px-[30px] bg-pink rounded-[20px]"
+      <div class="hidden desktop:flex items-center justify-center gap-x-2.5">
+        <ul class="flex items-center justify-center gap-x-2.5">
+          <li
+            v-for="menuItem in menuItems"
+            :key="menuItem.id"
+            class="flex items-center justify-center flex-shrink py-3 px-5"
           >
-            <Icon name="heroicons:user" class="size-5" />
-            <span>Sign Up</span>
-          </a>
-        </li>
-      </ul>
+            <a href="#">{{ menuItem.title }}</a>
+          </li>
+        </ul>
+        <a
+          href="#"
+          class="flex items-center justify-center gap-x-3 py-5 px-7.5 bg-pink rounded-[20px] font-semibold text-base"
+        >
+          <Icon name="heroicons:user" class="size-5" />
+          <span>Sign Up</span>
+        </a>
+      </div>
+
       <Icon
         name="heroicons:bars-3-bottom-left-solid"
-        class="md:hidden size-6 text-primary-dark dark:text-white"
+        class="desktop:hidden size-6 text-primary-dark dark:text-white"
       />
       <!--      <button @click="changeTheme">click to change the theme</button>-->
     </div>
@@ -32,6 +35,16 @@
 </template>
 
 <script setup lang="ts">
+interface menuItem {
+  id: number;
+  title: string;
+}
+
+const menuItems: menuItem[] = [
+  { id: 1, title: "Marketplace" },
+  { id: 2, title: "Rankings" },
+  { id: 3, title: "Connect a wallet" },
+];
 const changeTheme = () => {
   const currentMode = useColorMode().value; // Get the current color mode
   useColorMode().preference = currentMode === "dark" ? "light" : "dark"; // Toggle theme

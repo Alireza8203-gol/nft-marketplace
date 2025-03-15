@@ -10,22 +10,18 @@ export default {
   theme: {
     container: {
       center: true,
-      padding: {
-        DEFAULT: "30px",
-        sm: "2rem",
-        lg: "4rem",
-        xl: "5rem",
-        // "2xl": "6rem",
+      padding: "30px", // Always 30px padding on both sides
+      screens: {
+        mobile: "375px", // 315px content + 30px left + 30px right
+        tablet: "750px", // 690px content + 30px left + 30px right
+        desktop: "1110px", // 1050px content + 30px left + 30px right
       },
     },
     screens: {
       // mobile: "375px", tablet: "834px", desktop: "1280",
-      xs: "375px",
-      sm: "640px",
-      md: "768px",
-      lg: "1024px",
-      xl: "1280px",
-      // "2xl": "1536px",
+      mobile: "375px",
+      tablet: "834px",
+      desktop: "1280px",
     },
     extend: {
       fontFamily: {
@@ -36,6 +32,9 @@ export default {
         "primary-dark": "#2B2B2B",
         "primary-light": "#D4D4D4",
         pink: "#A259FF",
+      },
+      spacing: {
+        7.5: "30px",
       },
       safelist: ["bg-primary-dark", "font-workSans"],
     },
