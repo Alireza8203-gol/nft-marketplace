@@ -1,8 +1,6 @@
 <template>
-  <header>
-    <Navbar />
-    <Hero />
-  </header>
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 </template>
-
 <script setup lang="ts"></script>

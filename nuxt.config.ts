@@ -4,11 +4,14 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
   css: ["~/assets/css/tailwind.css"],
   modules: [
-    "@nuxtjs/tailwindcss",
+    "@nuxt/icon",
     "@nuxt/image",
     "@nuxtjs/color-mode",
-    "@nuxt/icon",
+    "@nuxtjs/tailwindcss",
   ],
+  devServer: {
+    port: 4000,
+  },
   colorMode: {
     preference: "dark", // default value of $colorMode.preference. could be system as well
     fallback: "light", // fallback value if not system preference found
@@ -44,9 +47,6 @@ export default defineNuxtConfig({
           href: "https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap",
         },
       ],
-      // bodyAttrs: {
-      //   class: "dark:bg-primary-dark",
-      // },
     },
   },
 });

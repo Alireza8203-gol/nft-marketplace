@@ -1,7 +1,7 @@
 <template>
   <nav>
     <div
-      class="flex items-center justify-between py-[15px] desktop:py-5 px-7.5 table:px-[50px] text-primary-dark dark:text-white font-semibold"
+      class="flex items-center justify-between py-[15px] desktop:py-5 px-7.5 tablet:px-[50px] text-primary-dark dark:text-white font-semibold"
     >
       <LogoIcon
         class="w-[182.56px] h-6 desktop:w-[243.41px] desktop:h-8 text-primary-dark dark:text-white"
@@ -13,16 +13,14 @@
             :key="menuItem.id"
             class="flex items-center justify-center flex-shrink py-3 px-5"
           >
-            <a href="#">{{ menuItem.title }}</a>
+            <NuxtLink :to="menuItem.path">
+              {{ menuItem.title }}
+            </NuxtLink>
           </li>
         </ul>
-        <a
-          href="#"
-          class="flex items-center justify-center gap-x-3 py-5 px-7.5 bg-pink rounded-[20px] font-semibold text-base"
-        >
+        <CButton caption="Sign Up" link-to="/create-account">
           <Icon name="heroicons:user" class="size-5" />
-          <span>Sign Up</span>
-        </a>
+        </CButton>
       </div>
 
       <Icon
@@ -35,15 +33,18 @@
 </template>
 
 <script setup lang="ts">
-interface menuItem {
+import CButton from "~/components/C-Button.vue";
+
+interface MenuItem {
   id: number;
   title: string;
+  path: string;
 }
 
-const menuItems: menuItem[] = [
-  { id: 1, title: "Marketplace" },
-  { id: 2, title: "Rankings" },
-  { id: 3, title: "Connect a wallet" },
+const menuItems: MenuItem[] = [
+  { id: 1, title: "Marketplace", path: "/marketplace" },
+  { id: 2, title: "Rankings", path: "/rankings" },
+  { id: 3, title: "Connect a wallet", path: "/connect-wallet" },
 ];
 const changeTheme = () => {
   const currentMode = useColorMode().value; // Get the current color mode
