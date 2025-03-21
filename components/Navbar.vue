@@ -9,8 +9,8 @@
       <div class="hidden desktop:flex items-center justify-center gap-x-2.5">
         <ul class="flex items-center justify-center gap-x-2.5">
           <li
-            v-for="menuItem in menuItems"
             :key="menuItem.id"
+            v-for="menuItem in menuItems"
             class="flex items-center justify-center flex-shrink py-3 px-5"
           >
             <NuxtLink :to="menuItem.path">
@@ -34,22 +34,28 @@
 
 <script setup lang="ts">
 import CButton from "~/components/C-Button.vue";
+import axios from "axios";
 
 interface MenuItem {
   id: number;
   title: string;
   path: string;
 }
+const menuItems = ref<MenuItem[]>([]);
 
-const menuItems: MenuItem[] = [
-  { id: 1, title: "Marketplace", path: "/marketplace" },
-  { id: 2, title: "Rankings", path: "/rankings" },
-  { id: 3, title: "Connect a wallet", path: "/connect-wallet" },
-];
-const changeTheme = () => {
-  const currentMode = useColorMode().value; // Get the current color mode
-  useColorMode().preference = currentMode === "dark" ? "light" : "dark"; // Toggle theme
-};
+onMounted(async () => {
+  try {
+    const res = await axios.get("http://localhost:4000/api/menuItems");
+    menuItems.value = res.data;
+  } catch (error) {
+    console.log("Error while fetching menuItems", error);
+  }
+});
+
+// const changeTheme = () => {
+//   const currentMode = useColorMode().value; // Get the current color mode
+//   useColorMode().preference = currentMode === "dark" ? "light" : "dark"; // Toggle theme
+// };
 </script>
 
 <style scoped></style>

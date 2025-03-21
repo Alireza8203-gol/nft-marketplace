@@ -10,18 +10,16 @@ export default {
   theme: {
     container: {
       center: true,
-      padding: "30px", // Always 30px padding on both sides
+      padding: "30px", // Always 30 px padding on both sides
       screens: {
-        mobile: "375px", // 315px content + 30px left + 30px right
+        DEFAULT: "375px",
         tablet: "750px", // 690px content + 30px left + 30px right
         desktop: "1110px", // 1050px content + 30px left + 30px right
       },
     },
     screens: {
-      // mobile: "375px", tablet: "834px", desktop: "1280",
-      mobile: "375px",
-      tablet: "834px",
-      desktop: "1280px",
+      tablet: "750px",
+      desktop: "1110px",
     },
     extend: {
       fontFamily: {
@@ -38,6 +36,7 @@ export default {
       },
       lineHeight: {
         "extra-tight": 1.1,
+        140: 1.4,
         160: 1.6,
       },
       safelist: ["bg-primary-dark", "font-workSans"],
