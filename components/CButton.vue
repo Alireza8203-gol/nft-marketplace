@@ -1,8 +1,5 @@
 <template>
-  <NuxtLink
-    :to="props.linkTo"
-    class="flex items-center justify-center gap-x-3 py-5 px-7.5 bg-pink rounded-[20px] font-semibold text-base"
-  >
+  <NuxtLink :to="props.linkTo" class="btn">
     <slot />
     <span>{{ props.caption }}</span>
   </NuxtLink>

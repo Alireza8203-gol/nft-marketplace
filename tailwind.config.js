@@ -11,28 +11,35 @@ export default {
     container: {
       center: true,
       padding: "30px", // Always 30 px padding on both sides
-      screens: {
-        DEFAULT: "375px",
-        tablet: "750px", // 690px content + 30px left + 30px right
-        desktop: "1110px", // 1050px content + 30px left + 30px right
-      },
     },
     screens: {
-      tablet: "750px",
-      desktop: "1110px",
+      tablet: "834px",
+      desktop: "1280px",
     },
     extend: {
       fontFamily: {
         spaceMono: ["'Space Mono'", "monospace"],
         workSans: ["'Work Sans'", "sans-serif"],
       },
+      fontSize: {
+        "1.5xl": "22px",
+      },
       colors: {
         "primary-dark": "#2B2B2B",
         "primary-light": "#D4D4D4",
         pink: "#A259FF",
       },
+      borderRadius: {
+        "2.5xl": "20px",
+      },
       spacing: {
+        3.75: "15px",
+        5.5: "22px",
         7.5: "30px",
+        12.5: "50px",
+        15: "60px",
+        78.75: "315px",
+        82.5: "330px",
       },
       lineHeight: {
         "extra-tight": 1.1,

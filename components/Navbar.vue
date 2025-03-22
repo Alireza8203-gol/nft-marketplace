@@ -18,7 +18,7 @@
             </NuxtLink>
           </li>
         </ul>
-        <CButton caption="Sign Up" link-to="/create-account">
+        <CButton caption="Sign Up" class="btn btn-sm" link-to="/create-account">
           <Icon name="heroicons:user" class="size-5" />
         </CButton>
       </div>
@@ -33,7 +33,6 @@
 </template>
 
 <script setup lang="ts">
-import CButton from "~/components/C-Button.vue";
 import axios from "axios";
 
 interface MenuItem {

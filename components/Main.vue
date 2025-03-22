@@ -1,6 +1,5 @@
 <template>
-  <Header />
-  <Main />
+  <TrendingCollection />
 </template>
 
 <script setup lang="ts"></script>

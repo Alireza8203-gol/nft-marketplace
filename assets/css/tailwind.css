@@ -7,3 +7,37 @@
     @apply bg-primary-light dark:bg-primary-dark font-workSans text-primary-dark dark:text-white;
   }
 }
+
+@layer components {
+  .btn {
+    @apply flex items-center justify-center gap-x-3 w-full tablet:w-fit p-5 rounded-[20px] font-semibold text-base bg-pink;
+  }
+
+  .btn-sm {
+    @apply px-7.5;
+  }
+
+  .btn-lg {
+    @apply px-12.5;
+  }
+
+  .btn-outline {
+    @apply bg-transparent border-2 border-pink;
+  }
+
+  .container {
+    max-width: 375px; /* Default */
+  }
+
+  @media (min-width: 834px) {
+    .container {
+      max-width: 750px; /* 690px content + 30px padding */
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .container {
+      max-width: 1110px; /* 1050px content + 30px padding */
+    }
+  }
+}
