@@ -11,10 +11,15 @@ export default {
     container: {
       center: true,
       padding: "30px", // Always 30 px padding on both sides
+      screens: {
+        DEFAULT: "375px",
+        tablet: "750px",
+        desktop: "1110px",
+      },
     },
     screens: {
-      tablet: "834px",
-      desktop: "1280px",
+      tablet: "750px",
+      desktop: "1110px",
     },
     extend: {
       fontFamily: {

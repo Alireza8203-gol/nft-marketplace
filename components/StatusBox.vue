@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class="flex flex-col items-center tablet:items-start">
     <h4
       class="font-spaceMono font-bold text-[22px] leading-160 desktop:text-[28px] desktop:leading-[1.4]"
     >
