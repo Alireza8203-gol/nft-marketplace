@@ -34,12 +34,8 @@
 
 <script setup lang="ts">
 import axios from "axios";
+import type { MenuItem } from "~/types/Global";
 
-interface MenuItem {
-  id: number;
-  title: string;
-  path: string;
-}
 const menuItems = ref<MenuItem[]>([]);
 
 onMounted(async () => {

@@ -17,7 +17,8 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps({
+import type { SectionHeaderProps } from "~/types/Global";
+const props: SectionHeaderProps = defineProps({
   title: {
     type: String,
     default: "Section Heading",

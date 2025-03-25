@@ -1,0 +1,152 @@
+[
+  {
+    "id": "a3f1b9e4c2d67f8a",
+    "name": "Jack Miller",
+    "username": "Animakid",
+    "profileImage": "avatar3-min.png",
+    "bio": "A digital artist specializing in abstract NFT art.",
+    "walletAddress": "0x123456789abcdef",
+    "totalSales": 34.53,
+    "nfts": [1, 3, 5]
+  },
+  {
+    "id": "f47b21d9e8c305a1",
+    "name": "Sophia Lane",
+    "username": "CryptoQueen",
+    "profileImage": "avatar7-min.png",
+    "bio": "Blending surrealism with blockchain-powered art.",
+    "walletAddress": "0x987654321abcdef",
+    "totalSales": 45.21,
+    "nfts": [2, 4, 6]
+  },
+  {
+    "id": "9c1f6b3e7a2d548f",
+    "name": "Ethan Blake",
+    "username": "NeonVibes",
+    "profileImage": "avatar11-min.png",
+    "bio": "Creator of vibrant cyberpunk digital assets.",
+    "walletAddress": "0xa1b2c3d4e5f67890",
+    "totalSales": 29.87,
+    "nfts": [7, 8, 9]
+  },
+  {
+    "id": "4e8f9b7c1d6a2f53",
+    "name": "Luna Rivers",
+    "username": "DreamPixel",
+    "profileImage": "avatar2-min.png",
+    "bio": "Exploring dreamy landscapes in NFT form.",
+    "walletAddress": "0xbcdef123456789ab",
+    "totalSales": 37.88,
+    "nfts": [10, 11, 12]
+  },
+  {
+    "id": "7d9f6c3e1a2b548f",
+    "name": "Nathan Scott",
+    "username": "BlockFrame",
+    "profileImage": "avatar5-min.png",
+    "bio": "Pushing the boundaries of generative art.",
+    "walletAddress": "0xabcdef987654321",
+    "totalSales": 50.12,
+    "nfts": [13, 14, 15]
+  },
+  {
+    "id": "6b3e1d9f7a2c548f",
+    "name": "Mia Torres",
+    "username": "NFTChic",
+    "profileImage": "avatar9-min.png",
+    "bio": "Fusing high fashion with blockchain technology.",
+    "walletAddress": "0x54321abcdef6789",
+    "totalSales": 62.45,
+    "nfts": [16, 17, 18]
+  },
+  {
+    "id": "2d9f6c3e1a7b548f",
+    "name": "Oliver Reed",
+    "username": "HoloCanvas",
+    "profileImage": "avatar12-min.png",
+    "bio": "Building futuristic NFT holograms.",
+    "walletAddress": "0xaabbccddeeff1122",
+    "totalSales": 41.09,
+    "nfts": [19, 20, 21]
+  },
+  {
+    "id": "8f6b3e1d9a2c547f",
+    "name": "Emily Foster",
+    "username": "ZenNFTs",
+    "profileImage": "avatar6-min.png",
+    "bio": "Creating peaceful, meditative NFT experiences.",
+    "walletAddress": "0xabcdef1234567890",
+    "totalSales": 28.76,
+    "nfts": [22, 23, 24]
+  },
+  {
+    "id": "1c7e5b3d9a2f648f",
+    "name": "Daniel Cross",
+    "username": "MetaGraffiti",
+    "profileImage": "avatar10-min.png",
+    "bio": "Street art meets digital ownership.",
+    "walletAddress": "0x9988776655443322",
+    "totalSales": 33.91,
+    "nfts": [25, 26, 27]
+  },
+  {
+    "id": "5e8c3b7d1a2f649f",
+    "name": "Victoria Chen",
+    "username": "CyberMuse",
+    "profileImage": "avatar4-min.png",
+    "bio": "Reimagining classical art with AI-powered NFTs.",
+    "walletAddress": "0x1122334455667788",
+    "totalSales": 55.63,
+    "nfts": [28, 29, 30]
+  },
+  {
+    "id": "3e9c5b7d1a2f648f",
+    "name": "Ryan Becker",
+    "username": "VoxelKnight",
+    "profileImage": "avatar1-min.png",
+    "bio": "Voxel-based NFT gaming assets designer.",
+    "walletAddress": "0xffeeddccbbaa9988",
+    "totalSales": 42.15,
+    "nfts": [31, 32, 33]
+  },
+  {
+    "id": "9f7d3b5c1e2a648f",
+    "name": "Sara Kim",
+    "username": "AIVisions",
+    "profileImage": "avatar15-min.png",
+    "bio": "Exploring AI-generated digital masterpieces.",
+    "walletAddress": "0x7766554433221100",
+    "totalSales": 36.79,
+    "nfts": [34, 35, 36]
+  },
+  {
+    "id": "6e9f3b5d1a2c748f",
+    "name": "Jake Sanders",
+    "username": "NFTNomad",
+    "profileImage": "avatar8-min.png",
+    "bio": "Capturing the world through crypto photography.",
+    "walletAddress": "0x66554433221100ff",
+    "totalSales": 48.94,
+    "nfts": [37, 38, 39]
+  },
+  {
+    "id": "4d9f7b3c1e2a658f",
+    "name": "Megan Brooks",
+    "username": "PixelBloom",
+    "profileImage": "avatar13-min.png",
+    "bio": "Bringing nature to life with digital pixels.",
+    "walletAddress": "0xff00112233445566",
+    "totalSales": 31.12,
+    "nfts": [40, 41, 42]
+  },
+  {
+    "id": "2d6f9b3e1a7c548f",
+    "name": "Chris Nolan",
+    "username": "GlitchMaster",
+    "profileImage": "avatar14-min.png",
+    "bio": "Experimenting with glitch aesthetics in NFTs.",
+    "walletAddress": "0x9988776655441122",
+    "totalSales": 39.45,
+    "nfts": [43, 44, 45]
+  }
+]

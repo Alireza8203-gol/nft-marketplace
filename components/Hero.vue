@@ -47,11 +47,7 @@
 <script setup lang="ts">
 import axios from "axios";
 import HeroAnimatedGif from "~/components/HeroAnimatedGif.vue";
-
-interface StatusObj {
-  title: string;
-  info: string;
-}
+import type { StatusObj } from "~/types/Global";
 
 const status = ref<StatusObj[]>([]);
 

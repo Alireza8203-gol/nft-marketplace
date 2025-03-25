@@ -12,12 +12,9 @@
 </template>
 
 <script setup lang="ts">
-interface Props {
-  statusInfo: string;
-  statusTitle: string;
-}
+import type { StatusBoxProps } from "~/types/Global";
 
-const props: Props = defineProps({
+const props: StatusBoxProps = defineProps({
   statusInfo: {
     type: String,
     default: "999K+",

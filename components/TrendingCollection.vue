@@ -30,23 +30,13 @@
 
 <script setup lang="ts">
 import axios from "axios";
-
-interface CollectionInfo {
-  id: number;
-  collectionTitle: string;
-  imagesSrc: string[];
-  artist: {
-    username: string;
-    profilePic: string;
-  };
-}
+import type { CollectionInfo } from "~/types/Global";
 
 const trendingCollections = ref<CollectionInfo[] | []>([]);
 
 onMounted(async () => {
   try {
     const { data } = await axios.get("/api/trending");
-    console.log(data);
     trendingCollections.value = data;
   } catch (error) {
     console.log("error fetching trending collections from api", error);

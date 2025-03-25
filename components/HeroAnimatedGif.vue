@@ -10,12 +10,9 @@
 </template>
 
 <script setup lang="ts">
-interface Props {
-  forMobile: boolean;
-  forDesktop: boolean;
-}
+import type { AnimatedGifProps } from "~/types/Global";
 
-const props: Props = defineProps({
+const props: AnimatedGifProps = defineProps({
   forMobile: {
     type: Boolean,
     default: false,

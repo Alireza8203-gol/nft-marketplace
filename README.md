@@ -1,6 +1,10 @@
-# Nuxt Minimal Starter
+# NFT Marketplace
+
+A NFT Marketplace template built by Nuxt and TailwindCss(v3.14).
 
 Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+
+[//]: # (<img src="/public/images/create-account-page-min.webp" alt="preview image">)
 
 ## Setup
 
@@ -22,7 +26,7 @@ bun install
 
 ## Development Server
 
-Start the development server on `http://localhost:3000`:
+Start the development server on `http://localhost:4000`:
 
 ```bash
 # npm

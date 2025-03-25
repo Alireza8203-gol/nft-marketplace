@@ -31,7 +31,9 @@ export default {
       },
       colors: {
         "primary-dark": "#2B2B2B",
+        "secondary-dark": "#3B3B3B",
         "primary-light": "#D4D4D4",
+        "custom-gray": "#858584",
         pink: "#A259FF",
       },
       borderRadius: {
@@ -43,6 +45,7 @@ export default {
         7.5: "30px",
         12.5: "50px",
         15: "60px",
+        30: "120px",
         78.75: "315px",
         82.5: "330px",
       },
