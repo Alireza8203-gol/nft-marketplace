@@ -1,7 +1,7 @@
 import { join } from "path";
 import { readFile } from "fs/promises";
 
-export default defineEventHandler(async (event) => {
+export default defineEventHandler(async (): Promise<any> => {
   try {
     // Get the file path
     const filePath = join(process.cwd(), "server/data/artists.json");

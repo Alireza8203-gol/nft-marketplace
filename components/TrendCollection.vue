@@ -1,9 +1,5 @@
 <template>
   <div class="flex flex-col items-center gap-y-3.75">
-    <!--    <div-->
-    <!--      class="flex items-center justify-center size-full rounded-2.5xl overflow-hidden"-->
-    <!--    >-->
-    <!--    </div>-->
     <div class="grid grid-rows-4 grid-cols-3 items-center gap-3.75">
       <NuxtImg
         :src="src"

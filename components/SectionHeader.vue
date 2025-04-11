@@ -26,6 +26,7 @@ const props: SectionHeaderProps = defineProps({
   subtitle: {
     type: String,
     default: "Section Subtitle",
+    required: false,
   },
 });
 </script>

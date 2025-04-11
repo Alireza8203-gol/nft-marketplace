@@ -49,3 +49,10 @@ export interface SectionHeaderProps {
   title: string;
   subtitle: string;
 }
+
+export interface CategoryInfo {
+  id: number;
+  svg: string;
+  name: string;
+  image: string;
+}

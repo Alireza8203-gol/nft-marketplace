@@ -13,9 +13,9 @@
         <!--        <TrendCollection class="hidden tablet:flex" />-->
         <!--        <TrendCollection class="hidden desktop:flex" />-->
         <TrendCollection
-          v-for="(collection, index) in trendingCollections"
           :key="index"
           :collection-info="collection"
+          v-for="(collection, index) in trendingCollections"
           :class="[
             {
               'hidden tablet:flex': index === 1,
