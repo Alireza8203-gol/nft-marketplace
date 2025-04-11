@@ -4,7 +4,7 @@ A NFT Marketplace template built by Nuxt and TailwindCss(v3.14).
 
 Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-[//]: # (<img src="/public/images/create-account-page-min.webp" alt="preview image">)
+![Porject's Preview](https://github.com/user-attachments/assets/62d1830b-cabf-4d0a-bc82-13503ea804bd)
 
 ## Setup
 
