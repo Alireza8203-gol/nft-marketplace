@@ -1,7 +1,7 @@
 <template>
   <NuxtLink
     to="/create-account"
-    class="flex desktop:flex-col items-center relative p-5 gap-x-5 gap-y-5 bg-secondary-dark rounded-2.5xl hover:scale-95 transition-transform duration-300"
+    class="flex desktop:flex-col items-center relative p-5 gap-x-5 gap-y-5 bg-secondary-dark rounded-2.5xl hover-class"
   >
     <div
       class="absolute left-3 top-3 desktop:left-5 desktop:top-5 flex items-center justify-center size-7.5 bg-primary-dark rounded-full overflow-hidden font-spaceMono leading-140"

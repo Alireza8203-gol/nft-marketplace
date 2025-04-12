@@ -5,7 +5,7 @@
         :src="src"
         :key="index"
         :class="[
-          'rounded-2.5xl overflow-hidden hover:scale-95 transition-transform duration-300',
+          'rounded-2.5xl overflow-hidden hover-class',
           { 'col-span-3 row-span-3': index === 0 },
         ]"
         v-for="(src, index) in collectionInfo.imagesSrc"

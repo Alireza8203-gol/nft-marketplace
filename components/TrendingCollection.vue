@@ -9,9 +9,6 @@
       <div
         class="grid grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-3 gap-x-7.5"
       >
-        <!--        <TrendCollection />-->
-        <!--        <TrendCollection class="hidden tablet:flex" />-->
-        <!--        <TrendCollection class="hidden desktop:flex" />-->
         <TrendCollection
           :key="index"
           :collection-info="collection"

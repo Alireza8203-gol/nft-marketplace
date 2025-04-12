@@ -54,5 +54,6 @@ export interface CategoryInfo {
   id: number;
   svg: string;
   name: string;
+  link: string;
   image: string;
 }

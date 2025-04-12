@@ -2,13 +2,11 @@
   <PageSection>
     <div class="container">
       <SectionHeader title="Browse Categories" subtitle="" />
-      <div
-        class="grid grid-cols-2 grid-rows-4 tablet:grid-cols-4 tablet:grid-rows-2 gap-7.5"
-      >
+      <div class="grid grid-cols-2 tablet:grid-cols-4 gap-5 tablet:gap-7.5">
         <CategoryCard
-          v-for="categoryInfo in categoriesArray"
           :key="categoryInfo.id"
           :category-info="categoryInfo"
+          v-for="categoryInfo in categoriesArray"
         />
       </div>
     </div>

@@ -25,6 +25,10 @@
     @apply bg-transparent border-2 border-pink;
   }
 
+  .hover-class {
+    @apply hover:scale-95 transition-transform duration-300;
+  }
+
   /*.container {*/
   /*  max-width: 375px; !* Default *!*/
   /*}*/

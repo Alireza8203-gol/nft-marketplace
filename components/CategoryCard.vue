@@ -1,19 +1,26 @@
 <template>
-  <div class="grid grid-rows-4 bg-secondary-dark rounded-2.5xl overflow-hidden">
+  <NuxtLink
+    :to="categoryInfo.link"
+    class="flex flex-col items-stretch bg-secondary-dark rounded-2.5xl overflow-hidden hover-class"
+  >
     <div
-      class="relative flex items-center justify-center row-span-3 h-36 desktop:h-60 bg-indigo-500"
+      class="relative flex items-stretch justify-center desktop:row-span-3 h-36 desktop:h-60"
     >
-      <NuxtImg :src="categoryInfo.image" class="bg-cover" />
-      <img alt="Art" :src="categoryInfo.svg" class="absolute size-20" />
+      <NuxtImg :src="categoryInfo.image" class="object-cover" />
+      <div
+        class="absolute flex items-center justify-center size-full backdrop-blur-lg"
+      >
+        <img alt="Art" :src="categoryInfo.svg" class="size-20" />
+      </div>
     </div>
     <div
-      class="flex items-center justify-start px-5 desktop:px-7.5 bg-secondary-dark"
+      class="flex items-stretch justify-start p-5 desktop:px-7.5 bg-secondary-dark"
     >
-      <h5 class="font-semibold desktop:text-1.5xl leading-140">
+      <h5 class="font-semibold desktop:text-1.5xl leading-140 flex-shrink">
         {{ categoryInfo.name }}
       </h5>
     </div>
-  </div>
+  </NuxtLink>
 </template>
 
 <script setup lang="ts">
