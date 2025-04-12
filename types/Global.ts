@@ -57,3 +57,17 @@ export interface CategoryInfo {
   link: string;
   image: string;
 }
+
+export interface NFTItem {
+  id: string;
+  name: string;
+  image: string;
+  price: number;
+  tags: string[];
+  ownerId: string;
+  currency: string; // e.g., "BTC", "ETH"
+  createdAt: string; // or Date if you parse it
+  creatorId: string;
+  description: string;
+  status: "listed" | "unlisted" | "sold"; // add more if needed
+}

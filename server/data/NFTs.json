@@ -2,7 +2,7 @@
   {
     "id": "a1b2c3d4",
     "name": "Galactic Ape",
-    "image": "",
+    "image": "life-on-edena-min.webp",
     "description": "A futuristic ape from another dimension.",
     "price": 0.75,
     "currency": "ETH",
@@ -15,7 +15,7 @@
   {
     "id": "e5f6g7h8",
     "name": "Cyber Samurai",
-    "image": "",
+    "image": "distant-galaxy-min.webp",
     "description": "A legendary samurai enhanced with cybernetic implants.",
     "price": 1.2,
     "currency": "BTC",
@@ -28,7 +28,7 @@
   {
     "id": "i9j0k1l2",
     "name": "Neon Panther",
-    "image": "",
+    "image": "astro-fiction-min.webp",
     "description": "A panther glowing in neon hues, roaming the digital jungle.",
     "price": 0.95,
     "currency": "USDT",
@@ -41,7 +41,7 @@
   {
     "id": "m3n4o5p6",
     "name": "Void Walker",
-    "image": "",
+    "image": "cherry-blossom-girl-35-min.webp",
     "description": "A mysterious traveler between dimensions.",
     "price": 1.5,
     "currency": "ETH",
@@ -54,7 +54,7 @@
   {
     "id": "q7r8s9t0",
     "name": "Crystal Golem",
-    "image": "",
+    "image": "colorful-dog-344-min.webp",
     "description": "A towering golem made of shimmering crystals.",
     "price": 0.65,
     "currency": "BTC",
@@ -67,7 +67,7 @@
   {
     "id": "u1v2w3x4",
     "name": "Solar Phoenix",
-    "image": "",
+    "image": "colorful-dog-min.webp",
     "description": "A majestic phoenix reborn from the heart of a star.",
     "price": 2.1,
     "currency": "ETH",
@@ -80,7 +80,7 @@
   {
     "id": "y5z6a7b8",
     "name": "Hologram Tiger",
-    "image": "",
+    "image": "crypto-city-min.webp",
     "description": "A tiger made of pure light, shifting between colors.",
     "price": 1.75,
     "currency": "USDT",
@@ -93,7 +93,7 @@
   {
     "id": "c9d0e1f2",
     "name": "Shadow Ninja",
-    "image": "",
+    "image": "desert-walk-robot-min.webp",
     "description": "A stealthy ninja who moves between shadows.",
     "price": 0.88,
     "currency": "BTC",
@@ -106,7 +106,7 @@
   {
     "id": "g3h4i5j6",
     "name": "Interstellar Whale",
-    "image": "",
+    "image": "happy-robot-24-min.webp",
     "description": "A cosmic whale that swims through the void of space.",
     "price": 2.5,
     "currency": "ETH",
@@ -119,7 +119,7 @@
   {
     "id": "k7l8m9n0",
     "name": "Golden Scarab",
-    "image": "",
+    "image": "space-tales-min.webp",
     "description": "A divine beetle covered in golden armor.",
     "price": 0.55,
     "currency": "USDT",
@@ -132,7 +132,7 @@
   {
     "id": "o1p2q3r4",
     "name": "Frost Guardian",
-    "image": "",
+    "image": "subscribe-widget-min.webp",
     "description": "A mystical warrior forged from ice and snow.",
     "price": 1.3,
     "currency": "BTC",
@@ -145,7 +145,7 @@
   {
     "id": "s5t6u7v8",
     "name": "Celestial Fox",
-    "image": "",
+    "image": "sunset-dimension-min.webp",
     "description": "A fox whose fur glows with the light of distant galaxies.",
     "price": 0.99,
     "currency": "ETH",
@@ -158,7 +158,7 @@
   {
     "id": "w9x0y1z2",
     "name": "Lava Minotaur",
-    "image": "",
+    "image": "virtual-worlds-min.webp",
     "description": "A fearsome minotaur with veins of molten lava.",
     "price": 1.6,
     "currency": "USDT",
@@ -171,7 +171,7 @@
   {
     "id": "a3b4c5d6",
     "name": "Quantum Wizard",
-    "image": "",
+    "image": "icecream-ape-min.webp",
     "description": "A master of quantum magic, bending reality at will.",
     "price": 2.3,
     "currency": "BTC",
@@ -184,7 +184,7 @@
   {
     "id": "e7f8g9h0",
     "name": "Storm Dragon",
-    "image": "",
+    "image": "connect-wallet-page-min.webp",
     "description": "A dragon that harnesses the power of lightning storms.",
     "price": 1.8,
     "currency": "ETH",
@@ -197,7 +197,7 @@
   {
     "id": "i1j2k3l4",
     "name": "BioMech Panther",
-    "image": "",
+    "image": "distant-galaxy-min.webp",
     "description": "A fusion of nature and technology, this panther is unstoppable.",
     "price": 0.9,
     "currency": "BTC",
@@ -210,7 +210,7 @@
   {
     "id": "m5n6o7p8",
     "name": "Eclipse Knight",
-    "image": "",
+    "image": "giant-mushroom-min.webp",
     "description": "A warrior who gains strength from lunar and solar eclipses.",
     "price": 1.4,
     "currency": "USDT",
@@ -223,7 +223,7 @@
   {
     "id": "q9r0s1t2",
     "name": "Prismatic Phantom",
-    "image": "",
+    "image": "create-account-page-min.webp",
     "description": "A ghostly entity that bends light to become invisible.",
     "price": 1.1,
     "currency": "ETH",
@@ -236,7 +236,7 @@
   {
     "id": "u3v4w5x6",
     "name": "Infernal Centaur",
-    "image": "",
+    "image": "hero-spaceman-min.webp",
     "description": "A centaur born from the flames of the underworld.",
     "price": 2.0,
     "currency": "BTC",
@@ -249,7 +249,7 @@
   {
     "id": "y7z8a9b0",
     "name": "Aqua Serpent",
-    "image": "",
+    "image": "astro-fiction-min.webp",
     "description": "A legendary sea serpent that commands the tides.",
     "price": 0.85,
     "currency": "USDT",

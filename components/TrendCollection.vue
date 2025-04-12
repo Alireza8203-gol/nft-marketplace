@@ -19,22 +19,14 @@
       <h5 class="font-workSans font-semibold text-1.5xl leading-140">
         {{ collectionInfo.collectionTitle }}
       </h5>
-      <div class="flex items-start justify-start gap-x-3">
-        <NuxtLink to="/">
-          <NuxtImg
-            :src="props.collectionInfo.artist.profilePic"
-            class="size-6 rounded-2.5xl overflow-hidden hover:scale-95 transition-transform duration-300"
-          />
-        </NuxtLink>
-        <p class="font-workSans font-normal text-base leading-140">
-          {{ collectionInfo.artist.username }}
-        </p>
-      </div>
+      <ArtistProfileSmall :artist-info="props.collectionInfo.artist" />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+import ArtistProfileSmall from "~/components/ArtistProfile-small.vue";
+
 const props = defineProps({
   collectionInfo: {
     type: Object,

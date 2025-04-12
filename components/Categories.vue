@@ -23,7 +23,6 @@ onMounted(async () => {
   try {
     const { data } = await axios.get("/api/categories");
     categoriesArray.value = data;
-    console.log(data);
   } catch (error) {
     console.log("Error while fetching data from API: ", error);
   }
