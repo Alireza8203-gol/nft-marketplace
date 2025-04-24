@@ -19,7 +19,7 @@
           :key="NFT.id"
           :nfts-info="NFT"
           variant="lighter"
-          v-for="NFT in NFTsInfoArray"
+          v-for="NFT in visibleNFTsInfoArray"
         />
       </div>
     </div>
@@ -29,15 +29,45 @@
 <script setup lang="ts">
 import axios from "axios";
 import type { NFTItem } from "~/types/Global";
+import { useWindowStore } from "~/stores/useWindowWidth";
 
-const NFTsInfoArray = ref<NFTItem[] | []>([]);
+const windowStore = useWindowStore();
+const allNFTsInfoArray = ref<NFTItem[] | []>([]);
+const visibleNFTsInfoArray = ref<NFTItem[] | []>([]);
+
+const getSliceAmount = () => {
+  if (windowStore.width < 750) return 3;
+  if (750 <= windowStore.width && windowStore.width < 1110) return 2;
+  return 3;
+};
+const updateVisibleNFTs = () => {
+  visibleNFTsInfoArray.value = allNFTsInfoArray.value.slice(
+    0,
+    getSliceAmount(),
+  );
+};
 
 onMounted(async () => {
+  windowStore.updateWidth();
+  window.addEventListener("resize", windowStore.updateWidth);
   try {
     const { data } = await axios.get("/api/allNFTs");
-    NFTsInfoArray.value = data.slice(0, 3) as NFTItem[];
+    allNFTsInfoArray.value = data;
+    updateVisibleNFTs();
   } catch (error) {
     console.log("Error while fetching data in the component: ", error);
   }
 });
+
+onUnmounted(() => {
+  window.removeEventListener("resize", windowStore.updateWidth);
+});
+
+watch(
+  () => windowStore.width,
+  () => {
+    updateVisibleNFTs();
+  },
+  { immediate: true },
+);
 </script>

@@ -6,6 +6,7 @@ export default defineNuxtConfig({
   modules: [
     "@nuxt/icon",
     "@nuxt/image",
+    "@pinia/nuxt",
     "@nuxtjs/color-mode",
     "@nuxtjs/tailwindcss",
   ],
@@ -13,22 +14,16 @@ export default defineNuxtConfig({
     port: 4000,
   },
   colorMode: {
-    preference: "dark", // default value of $colorMode.preference. could be system as well
     fallback: "light", // fallback value if not system preference found
-    hid: "nuxt-color-mode-script",
-    globalName: "__NUXT_COLOR_MODE__",
-    componentName: "ColorScheme",
+    preference: "dark", // default value of $colorMode.preference. could be system as well
     storage: "localStorage", // or 'sessionStorage' or 'cookie'
+    componentName: "ColorScheme",
+    hid: "nuxt-color-mode-script",
     storageKey: "nuxt-color-mode",
+    globalName: "__NUXT_COLOR_MODE__",
   },
   icon: {
-    // provider: "server",
-    // customCollections: [
-    //   {
-    //     prefix: "local",
-    //     dir: "~/assets/svg-icons",
-    //   },
-    // ],
+    collections: ["heroicons"]
   },
   app: {
     head: {

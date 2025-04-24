@@ -19,7 +19,7 @@
           :index="index"
           :key="artist.id"
           :artist="artist"
-          v-for="(artist, index) in artists"
+          v-for="(artist, index) in visibleArtists"
         />
       </div>
       <CButton
@@ -36,26 +36,22 @@
 import axios from "axios";
 import type { ArtistInfo } from "~/types/Global";
 
-const width = ref<number>(0);
+const windowStore = useWindowStore();
 const allArtists = ref<ArtistInfo[]>([]);
-const artists: Ref<ArtistInfo[] | []> = ref([]);
+const visibleArtists: Ref<ArtistInfo[] | []> = ref([]);
 
 const updateVisibleArtists = () => {
-  artists.value = allArtists.value.slice(0, getSliceAmount());
-};
-const updateWidth = () => {
-  width.value = window.innerWidth;
-  updateVisibleArtists();
+  visibleArtists.value = allArtists.value.slice(0, getSliceAmount());
 };
 const getSliceAmount = () => {
-  if (width.value < 750) return 5;
-  if (750 <= width.value && width.value < 1110) return 6;
+  if (windowStore.width < 750) return 5;
+  if (750 <= windowStore.width && windowStore.width < 1110) return 6;
   return 12;
 };
 
 onMounted(async () => {
-  updateWidth();
-  window.addEventListener("resize", updateWidth);
+  windowStore.updateWidth();
+  window.addEventListener("resize", windowStore.updateWidth);
   try {
     const { data } = await axios.get("api/artists");
     allArtists.value = data as ArtistInfo[];
@@ -66,6 +62,13 @@ onMounted(async () => {
 });
 
 onUnmounted(() => {
-  window.removeEventListener("resize", updateWidth);
+  window.removeEventListener("resize", windowStore.updateWidth);
 });
+
+watch(
+  () => windowStore.width,
+  () => {
+    updateVisibleArtists();
+  },
+);
 </script>
