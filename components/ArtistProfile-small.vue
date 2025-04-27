@@ -2,12 +2,12 @@
   <div class="flex items-start justify-start gap-x-3">
     <NuxtLink to="/">
       <NuxtImg
-        :src="props.artistInfo.profilePic"
+        :src="`/images/avatars/${props.artistInfo?.profilePic}`"
         class="size-6 rounded-2.5xl overflow-hidden hover:scale-95 transition-transform duration-300"
       />
     </NuxtLink>
     <p class="font-workSans font-normal text-base leading-140">
-      {{ artistInfo.username }}
+      {{ artistInfo?.username }}
     </p>
   </div>
 </template>
@@ -20,13 +20,13 @@ interface ArtistInfo {
 
 const props = withDefaults(
   defineProps<{
-    artistInfo?: ArtistInfo;
+    artistInfo: ArtistInfo;
   }>(),
   {
-    artistInfo: {
+    artistInfo: () => ({
       username: "default artist",
-      profilePic: "/images/avatars/avatar1-min.png",
-    },
+      profilePic: "avatar1-min.png",
+    }),
   },
 );
 </script>

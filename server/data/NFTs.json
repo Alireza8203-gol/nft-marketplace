@@ -6,11 +6,14 @@
     "description": "A futuristic ape from another dimension.",
     "price": 0.75,
     "currency": "ETH",
-    "creatorId": "",
+    "creatorId": "a3f1b9e4c2d67f8a",
     "ownerId": "",
     "createdAt": "2025-03-24T12:00:00Z",
     "status": "listed",
-    "tags": ["sci-fi", "ape"]
+    "tags": [
+      "sci-fi",
+      "ape"
+    ]
   },
   {
     "id": "e5f6g7h8",
@@ -19,11 +22,14 @@
     "description": "A legendary samurai enhanced with cybernetic implants.",
     "price": 1.2,
     "currency": "BTC",
-    "creatorId": "",
+    "creatorId": "a3f1b9e4c2d67f8a",
     "ownerId": "",
     "createdAt": "2025-03-20T15:30:00Z",
     "status": "listed",
-    "tags": ["samurai", "cyberpunk"]
+    "tags": [
+      "samurai",
+      "cyberpunk"
+    ]
   },
   {
     "id": "i9j0k1l2",
@@ -32,11 +38,14 @@
     "description": "A panther glowing in neon hues, roaming the digital jungle.",
     "price": 0.95,
     "currency": "USDT",
-    "creatorId": "",
+    "creatorId": "a3f1b9e4c2d67f8a",
     "ownerId": "",
     "createdAt": "2025-03-18T08:45:00Z",
     "status": "unlisted",
-    "tags": ["neon", "panther"]
+    "tags": [
+      "neon",
+      "panther"
+    ]
   },
   {
     "id": "m3n4o5p6",
@@ -45,11 +54,14 @@
     "description": "A mysterious traveler between dimensions.",
     "price": 1.5,
     "currency": "ETH",
-    "creatorId": "",
+    "creatorId": "a3f1b9e4c2d67f8a",
     "ownerId": "",
     "createdAt": "2025-03-12T14:20:00Z",
     "status": "listed",
-    "tags": ["mystery", "sci-fi"]
+    "tags": [
+      "mystery",
+      "sci-fi"
+    ]
   },
   {
     "id": "q7r8s9t0",
@@ -58,11 +70,14 @@
     "description": "A towering golem made of shimmering crystals.",
     "price": 0.65,
     "currency": "BTC",
-    "creatorId": "",
+    "creatorId": "a3f1b9e4c2d67f8a",
     "ownerId": "",
     "createdAt": "2025-03-10T21:10:00Z",
     "status": "listed",
-    "tags": ["golem", "crystal"]
+    "tags": [
+      "golem",
+      "crystal"
+    ]
   },
   {
     "id": "u1v2w3x4",
@@ -71,11 +86,14 @@
     "description": "A majestic phoenix reborn from the heart of a star.",
     "price": 2.1,
     "currency": "ETH",
-    "creatorId": "",
+    "creatorId": "a3f1b9e4c2d67f8a",
     "ownerId": "",
     "createdAt": "2025-03-05T17:55:00Z",
     "status": "unlisted",
-    "tags": ["fire", "phoenix"]
+    "tags": [
+      "fire",
+      "phoenix"
+    ]
   },
   {
     "id": "y5z6a7b8",
@@ -84,11 +102,14 @@
     "description": "A tiger made of pure light, shifting between colors.",
     "price": 1.75,
     "currency": "USDT",
-    "creatorId": "",
+    "creatorId": "f47b21d9e8c305a1",
     "ownerId": "",
     "createdAt": "2025-02-28T13:40:00Z",
     "status": "listed",
-    "tags": ["hologram", "tiger"]
+    "tags": [
+      "hologram",
+      "tiger"
+    ]
   },
   {
     "id": "c9d0e1f2",
@@ -97,11 +118,14 @@
     "description": "A stealthy ninja who moves between shadows.",
     "price": 0.88,
     "currency": "BTC",
-    "creatorId": "",
+    "creatorId": "f47b21d9e8c305a1",
     "ownerId": "",
     "createdAt": "2025-02-25T09:15:00Z",
     "status": "unlisted",
-    "tags": ["ninja", "stealth"]
+    "tags": [
+      "ninja",
+      "stealth"
+    ]
   },
   {
     "id": "g3h4i5j6",
@@ -110,11 +134,14 @@
     "description": "A cosmic whale that swims through the void of space.",
     "price": 2.5,
     "currency": "ETH",
-    "creatorId": "",
+    "creatorId": "f47b21d9e8c305a1",
     "ownerId": "",
     "createdAt": "2025-02-22T22:10:00Z",
     "status": "listed",
-    "tags": ["space", "whale"]
+    "tags": [
+      "space",
+      "whale"
+    ]
   },
   {
     "id": "k7l8m9n0",
@@ -123,11 +150,14 @@
     "description": "A divine beetle covered in golden armor.",
     "price": 0.55,
     "currency": "USDT",
-    "creatorId": "",
+    "creatorId": "9c1f6b3e7a2d548f",
     "ownerId": "",
     "createdAt": "2025-02-20T11:30:00Z",
     "status": "unlisted",
-    "tags": ["scarab", "gold"]
+    "tags": [
+      "scarab",
+      "gold"
+    ]
   },
   {
     "id": "o1p2q3r4",
@@ -136,11 +166,14 @@
     "description": "A mystical warrior forged from ice and snow.",
     "price": 1.3,
     "currency": "BTC",
-    "creatorId": "",
+    "creatorId": "9c1f6b3e7a2d548f",
     "ownerId": "",
     "createdAt": "2025-02-17T16:20:00Z",
     "status": "listed",
-    "tags": ["ice", "guardian"]
+    "tags": [
+      "ice",
+      "guardian"
+    ]
   },
   {
     "id": "s5t6u7v8",
@@ -149,11 +182,14 @@
     "description": "A fox whose fur glows with the light of distant galaxies.",
     "price": 0.99,
     "currency": "ETH",
-    "creatorId": "",
+    "creatorId": "9c1f6b3e7a2d548f",
     "ownerId": "",
     "createdAt": "2025-02-15T12:45:00Z",
     "status": "unlisted",
-    "tags": ["fox", "celestial"]
+    "tags": [
+      "fox",
+      "celestial"
+    ]
   },
   {
     "id": "w9x0y1z2",
@@ -162,11 +198,14 @@
     "description": "A fearsome minotaur with veins of molten lava.",
     "price": 1.6,
     "currency": "USDT",
-    "creatorId": "",
+    "creatorId": "4e8f9b7c1d6a2f53",
     "ownerId": "",
     "createdAt": "2025-02-10T19:35:00Z",
     "status": "listed",
-    "tags": ["lava", "minotaur"]
+    "tags": [
+      "lava",
+      "minotaur"
+    ]
   },
   {
     "id": "a3b4c5d6",
@@ -175,11 +214,14 @@
     "description": "A master of quantum magic, bending reality at will.",
     "price": 2.3,
     "currency": "BTC",
-    "creatorId": "",
+    "creatorId": "4e8f9b7c1d6a2f53",
     "ownerId": "",
     "createdAt": "2025-02-08T07:55:00Z",
     "status": "unlisted",
-    "tags": ["wizard", "quantum"]
+    "tags": [
+      "wizard",
+      "quantum"
+    ]
   },
   {
     "id": "e7f8g9h0",
@@ -188,11 +230,14 @@
     "description": "A dragon that harnesses the power of lightning storms.",
     "price": 1.8,
     "currency": "ETH",
-    "creatorId": "",
+    "creatorId": "6e9f3b5d1a2c748f",
     "ownerId": "",
     "createdAt": "2025-02-05T14:10:00Z",
     "status": "listed",
-    "tags": ["dragon", "storm"]
+    "tags": [
+      "dragon",
+      "storm"
+    ]
   },
   {
     "id": "i1j2k3l4",
@@ -201,11 +246,14 @@
     "description": "A fusion of nature and technology, this panther is unstoppable.",
     "price": 0.9,
     "currency": "BTC",
-    "creatorId": "",
+    "creatorId": "9c1f6b3e7a2d548f",
     "ownerId": "",
     "createdAt": "2025-02-02T18:20:00Z",
     "status": "unlisted",
-    "tags": ["biomech", "panther"]
+    "tags": [
+      "biomech",
+      "panther"
+    ]
   },
   {
     "id": "m5n6o7p8",
@@ -214,11 +262,14 @@
     "description": "A warrior who gains strength from lunar and solar eclipses.",
     "price": 1.4,
     "currency": "USDT",
-    "creatorId": "",
+    "creatorId": "6e9f3b5d1a2c748f",
     "ownerId": "",
     "createdAt": "2025-01-29T20:45:00Z",
     "status": "listed",
-    "tags": ["knight", "eclipse"]
+    "tags": [
+      "knight",
+      "eclipse"
+    ]
   },
   {
     "id": "q9r0s1t2",
@@ -227,24 +278,30 @@
     "description": "A ghostly entity that bends light to become invisible.",
     "price": 1.1,
     "currency": "ETH",
-    "creatorId": "",
+    "creatorId": "7d9f6c3e1a2b548f",
     "ownerId": "",
     "createdAt": "2025-01-25T22:30:00Z",
     "status": "unlisted",
-    "tags": ["phantom", "prism"]
+    "tags": [
+      "phantom",
+      "prism"
+    ]
   },
   {
     "id": "u3v4w5x6",
     "name": "Infernal Centaur",
     "image": "hero-spaceman-min.webp",
     "description": "A centaur born from the flames of the underworld.",
-    "price": 2.0,
+    "price": 2,
     "currency": "BTC",
-    "creatorId": "",
+    "creatorId": "3e9c5b7d1a2f648f",
     "ownerId": "",
     "createdAt": "2025-01-20T11:15:00Z",
     "status": "listed",
-    "tags": ["centaur", "fire"]
+    "tags": [
+      "centaur",
+      "fire"
+    ]
   },
   {
     "id": "y7z8a9b0",
@@ -253,10 +310,13 @@
     "description": "A legendary sea serpent that commands the tides.",
     "price": 0.85,
     "currency": "USDT",
-    "creatorId": "",
+    "creatorId": "8f6b3e1d9a2c547f",
     "ownerId": "",
     "createdAt": "2025-01-15T17:00:00Z",
     "status": "unlisted",
-    "tags": ["serpent", "water"]
+    "tags": [
+      "serpent",
+      "water"
+    ]
   }
 ]

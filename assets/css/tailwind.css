@@ -29,16 +29,19 @@
     @apply hover:scale-95 transition-transform duration-300;
   }
 
+  /*background: linear-gradient(*/
+  /*  180deg,*/
+  /*  rgba(162.00005114078522, 89.00000989437103, 255, 0) 0%,*/
+  /*  rgb(162.00000554323196, 89.00000229477882, 255) 100%*/
+  /*);*/
   /*.container {*/
   /*  max-width: 375px; !* Default *!*/
   /*}*/
-
   /*@media (min-width: 834px) {*/
   /*  .container {*/
   /*    max-width: 750px; !* 690px content + 30px padding *!*/
   /*  }*/
   /*}*/
-
   /*@media (min-width: 1280px) {*/
   /*  .container {*/
   /*    max-width: 1110px; !* 1050px content + 30px padding *!*/

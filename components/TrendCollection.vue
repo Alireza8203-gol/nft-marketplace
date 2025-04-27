@@ -41,7 +41,7 @@ const props = defineProps({
       ],
       artist: {
         username: "default artist",
-        profilePic: "/images/avatars/avatar1.png",
+        profilePic: "avatar1.png",
       },
     },
   },

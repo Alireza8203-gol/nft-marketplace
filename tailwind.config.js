@@ -28,6 +28,10 @@ export default {
       },
       fontSize: {
         "1.5xl": "22px",
+        "2.3xl": "26px",
+        "2.6xl": "28px",
+        "4.2xl": "38px",
+        "5.1xl": "51px",
       },
       colors: {
         "primary-dark": "#2B2B2B",

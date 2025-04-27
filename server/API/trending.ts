@@ -10,7 +10,7 @@ export default defineEventHandler(() => {
       ],
       artist: {
         username: "MrFox",
-        profilePic: "/images/avatars/avatar6-min.png",
+        profilePic: "avatar6-min.png",
       },
     },
     {
@@ -23,7 +23,7 @@ export default defineEventHandler(() => {
       ],
       artist: {
         username: "Shroomie",
-        profilePic: "/images/avatars/avatar7-min.png",
+        profilePic: "avatar7-min.png",
       },
     },
     {
@@ -36,7 +36,7 @@ export default defineEventHandler(() => {
       ],
       artist: {
         username: "BeKind2Robots",
-        profilePic: "/images/avatars/avatar15-min.png",
+        profilePic: "avatar15-min.png",
       },
     },
   ];

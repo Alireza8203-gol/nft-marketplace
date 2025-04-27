@@ -1,18 +1,18 @@
 export interface ArtistInfo {
   id: string;
-  name: string;
-  username: string;
-  profileImage: string;
   bio: string;
-  walletAddress: string;
-  totalSales: number;
+  name: string;
   nfts: string[];
+  username: string;
+  profilePic: string;
+  totalSales: number;
+  walletAddress: string;
 }
 
 export interface CollectionInfo {
   id: number;
-  collectionTitle: string;
   imagesSrc: string[];
+  collectionTitle: string;
   artist: {
     username: string;
     profilePic: string;
@@ -21,13 +21,13 @@ export interface CollectionInfo {
 
 export interface MenuItem {
   id: number;
-  title: string;
   path: string;
+  title: string;
 }
 
 export interface StatusObj {
-  title: string;
   info: string;
+  title: string;
 }
 
 export interface AnimatedGifProps {
@@ -41,8 +41,8 @@ export interface StatusBoxProps {
 }
 
 export interface CButtonProps {
-  caption: string;
   linkTo: string;
+  caption: string;
 }
 
 export interface SectionHeaderProps {

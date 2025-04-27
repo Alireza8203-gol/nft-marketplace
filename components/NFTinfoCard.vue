@@ -19,7 +19,9 @@
         <h5 class="font-semibold text-1.5xl leading-140">
           {{ nftsInfo?.name }}
         </h5>
-        <ArtistProfileSmall />
+        <ArtistProfileSmall v-if="artist" :artist-info="artist" />
+        <div v-else-if="pending" class="text-sm text-gray-400">Loading artist...</div>
+        <div v-else-if="error" class="text-sm text-red-400">Error loading artist</div>
       </div>
       <div class="flex items-center justify-between w-full">
         <div class="flex flex-col items-start gap-y-2">
@@ -45,6 +47,7 @@
 
 <script setup lang="ts">
 import type { NFTItem } from "~/types/Global";
+import { useArtist } from '~/composables/useArtist';
 
 const props = withDefaults(
   defineProps<{
@@ -55,4 +58,6 @@ const props = withDefaults(
     variant: "darker",
   },
 );
+
+const { artist, pending, error } = useArtist(props.nftsInfo?.creatorId || '');
 </script>
