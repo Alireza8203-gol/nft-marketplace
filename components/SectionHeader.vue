@@ -7,7 +7,7 @@
         {{ title }}
       </h3>
       <p
-        class="font-workSans font-normal text-base leading-140 desktop:text-[22px] desktop:leading-160"
+        class="font-workSans font-normal text-base leading-140 desktop:text-1.5xl desktop:leading-160"
       >
         {{ subtitle }}
       </p>

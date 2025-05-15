@@ -9,7 +9,7 @@
       {{ index + 1 }}
     </div>
     <div class="size-15 desktop:size-30 rounded-full overflow-hidden">
-      <NuxtImg :src="`/images/avatars/${artist.profileImage}`" />
+      <NuxtImg :src="`/images/avatars/${artist.profilePic}`" />
     </div>
     <div
       class="flex flex-col items-start desktop:items-center justify-between desktop:gap-y-1 flex-grow"

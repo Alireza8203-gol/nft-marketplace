@@ -4,6 +4,7 @@
   <Categories />
   <Discover />
   <NFTHighlight />
+  <HowItWorks />
 </template>
 
 <script setup lang="ts"></script>

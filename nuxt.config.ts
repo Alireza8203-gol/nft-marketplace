@@ -23,7 +23,7 @@ export default defineNuxtConfig({
     globalName: "__NUXT_COLOR_MODE__",
   },
   icon: {
-    collections: ["heroicons"]
+    collections: ["heroicons"],
   },
   app: {
     head: {
