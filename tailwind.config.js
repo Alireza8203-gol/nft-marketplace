@@ -2,10 +2,10 @@
 export default {
   content: [
     "./App.vue", // Main Nuxt app file
-    "./components/**/*.{vue,js,ts}", // Scan components
-    "./layouts/**/*.vue", // Scan layouts
     "./pages/**/*.vue", // Scan pages
+    "./layouts/**/*.vue", // Scan layouts
     "./plugins/**/*.{js,ts}", // Scan plugins
+    "./components/**/*.{vue,js,ts}", // Scan components
   ],
   theme: {
     container: {
@@ -34,11 +34,12 @@ export default {
         "5.1xl": "51px",
       },
       colors: {
-        "primary-dark": "#2B2B2B",
-        "secondary-dark": "#3B3B3B",
-        "primary-light": "#D4D4D4",
-        "custom-gray": "#858584",
         pink: "#A259FF",
+        "custom-gray": "#858584",
+        "primary-dark": "#2B2B2B",
+        "primary-light": "#D4D4D4",
+        "secondary-dark": "#3B3B3B",
+        "custom-gray-light": "#CCCCCC",
       },
       borderRadius: {
         "2.5xl": "20px",

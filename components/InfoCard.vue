@@ -1,10 +1,14 @@
 <template>
   <div
-    class="grid grid-cols-10 tablet:grid-cols-1 grid-rows-1 tablet:grid-rows-2 items-center justify-center p-5 tablet:pt-2.5 tablet:px-5 desktop:px-7.5 rounded-2.5xl bg-secondary-dark"
+    class="flex tablet:flex-col items-center rounded-2.5xl tablet:max-w-[210px] desktop:max-w-[330px] p-5 tablet:p-7.5 tablet:pt-2.5 bg-secondary-dark"
   >
-    <img :src="props.imageSrc" class="col-span-4 aspect-square" alt="pic" />
+    <NuxtImg
+      alt="pic"
+      :src="props.imageSrc"
+      class="w-[100px] tablet:w-[160px] desktop:w-[250px] aspect-square"
+    />
     <div
-      class="col-span-6 flex flex-col tablet:items-center justify-center gap-y-2.5 tablet:text-center"
+      class="flex flex-col tablet:items-center justify-center gap-y-2.5 ml-5 tablet:ml-0 tablet:mt-5 tablet:text-center"
     >
       <h5 class="font-semibold desktop:text-1.5xl leading-140">
         {{ title }}

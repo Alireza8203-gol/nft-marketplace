@@ -29,6 +29,18 @@
     @apply hover:scale-95 transition-transform duration-300;
   }
 
+  .input {
+    @apply w-full py-3 px-5 leading-140 border border-custom-gray rounded-2.5xl overflow-hidden;
+  }
+
+  .input::placeholder {
+    @apply text-primary-dark;
+  }
+
+  .input--outline-none {
+    @apply border-none;
+  }
+
   /*background: linear-gradient(*/
   /*  180deg,*/
   /*  rgba(162.00005114078522, 89.00000989437103, 255, 0) 0%,*/

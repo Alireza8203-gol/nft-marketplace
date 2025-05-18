@@ -7,14 +7,9 @@
 
 <script setup lang="ts">
 import type { CButtonProps } from "~/types/Global";
-const props: CButtonProps = defineProps({
-  caption: {
-    type: String,
-    default: "Default Caption",
-  },
-  linkTo: {
-    type: String,
-    default: "/",
-  },
+
+const props = withDefaults(defineProps<CButtonProps>(), {
+  linkTo: "/",
+  caption: "Default Caption",
 });
 </script>
