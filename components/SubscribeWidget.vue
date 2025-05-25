@@ -33,7 +33,7 @@
               <c-input
                 type="email"
                 class="input desktop:input--outline-none"
-                placeholder="Enter Your Email Address"
+                placeholder="Enter Your Email"
               />
               <button
                 type="submit"

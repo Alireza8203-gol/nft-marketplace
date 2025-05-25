@@ -3,25 +3,14 @@
     <div
       class="flex items-center justify-between py-[15px] desktop:py-5 px-7.5 tablet:px-[50px] text-primary-dark dark:text-white font-semibold"
     >
-      <LogoIcon
-        class="w-[182.56px] h-6 desktop:w-[243.41px] desktop:h-8 text-primary-dark dark:text-white"
-      />
-      <div class="hidden desktop:flex items-center justify-center gap-x-2.5">
-        <ul class="flex items-center justify-center gap-x-2.5">
-          <li
-            :key="menuItem.id"
-            v-for="menuItem in menuItems"
-            class="flex items-center justify-center flex-shrink py-3 px-5"
-          >
-            <NuxtLink :to="menuItem.path">
-              {{ menuItem.title }}
-            </NuxtLink>
-          </li>
-        </ul>
-        <CButton caption="Sign Up" class="btn btn-sm" link-to="/create-account">
-          <Icon name="heroicons:user" class="size-5" />
-        </CButton>
-      </div>
+      <NuxtLink to="/">
+        <LogoIcon
+          class="w-[182.56px] h-6 desktop:w-[243.41px] desktop:h-8 text-primary-dark dark:text-white"
+        />
+      </NuxtLink>
+
+      <DesktopNavMenu :menu-items="menuItems" v-if="windowStore.width > 1110" />
+      <MobileNavMenu :menu-items="menuItems" v-else />
 
       <Icon
         name="heroicons:bars-3-bottom-left-solid"
@@ -35,12 +24,15 @@
 <script setup lang="ts">
 import axios from "axios";
 import type { MenuItem } from "~/types/Global";
+import { useWindowStore } from "~/stores/useWindowWidth";
+import DesktopNavMenu from "~/components/DesktopNavMenu.vue";
 
+const windowStore = useWindowStore();
 const menuItems = ref<MenuItem[]>([]);
 
 onMounted(async () => {
   try {
-    const res = await axios.get("http://localhost:4000/api/menuItems");
+    const res = await axios.get("api/menuItems");
     menuItems.value = res.data;
   } catch (error) {
     console.log("Error while fetching menuItems", error);
@@ -52,5 +44,3 @@ onMounted(async () => {
 //   useColorMode().preference = currentMode === "dark" ? "light" : "dark"; // Toggle theme
 // };
 </script>
-
-<style scoped></style>

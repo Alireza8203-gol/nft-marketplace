@@ -6,8 +6,9 @@
         subtitle="Checkout Top Rated Creators on the NFT Marketplace"
       >
         <CButton
+          link-to="/"
           caption="View Rankings"
-          class="btn btn-lg btn-outline self-end hidden tablet:flex"
+          class="btn-lg btn-outline self-end hidden tablet:flex"
         >
           <Icon name="heroicons:rocket-launch" class="size-5 text-pink" />
         </CButton>
@@ -23,8 +24,9 @@
         />
       </div>
       <CButton
+        link-to="/"
         caption="View Rankings"
-        class="btn btn-lg btn-outline self-end tablet:hidden"
+        class="btn-lg btn-outline self-end tablet:hidden"
       >
         <Icon name="heroicons:rocket-launch" class="size-5 text-pink" />
       </CButton>

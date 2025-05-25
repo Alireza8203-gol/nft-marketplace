@@ -24,7 +24,7 @@
             </p>
           </div>
           <HeroAnimatedGif :for-mobile="true" />
-          <c-button caption="Get Started" class="btn btn-lg">
+          <c-button link-to="/" caption="Get Started" class="btn-lg">
             <Icon name="heroicons:rocket-launch" class="size-5" />
           </c-button>
           <div

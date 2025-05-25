@@ -11,7 +11,7 @@
         v-for="(src, index) in collectionInfo.imagesSrc"
       />
       <CButton
-        to="/"
+        link-to="/"
         caption="1025+"
         class="size-full font-spaceMono font-bold text-base leading-140 tablet:text-1.5xl tablet:leading-160"
       />

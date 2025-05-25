@@ -6,6 +6,7 @@
         subtitle="Explore new trending NFTs"
       >
         <CButton
+          link-to="/"
           caption="See All"
           class="btn btn-lg btn-outline self-end hidden tablet:flex"
         >
