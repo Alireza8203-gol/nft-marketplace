@@ -10,9 +10,15 @@
       </NuxtLink>
 
       <DesktopNavMenu :menu-items="menuItems" v-if="windowStore.width > 1110" />
-      <MobileNavMenu :menu-items="menuItems" v-else />
+      <DrawerMenu
+        v-else
+        ref="drawerRef"
+        :menu-items="menuItems"
+        :direction="windowStore.width >= 750 ? 'y' : 'x'"
+      />
 
       <Icon
+        @click="openMenu"
         name="heroicons:bars-3-bottom-left-solid"
         class="desktop:hidden size-6 text-primary-dark dark:text-white"
       />
@@ -23,12 +29,18 @@
 
 <script setup lang="ts">
 import axios from "axios";
+import { ref } from "vue";
 import type { MenuItem } from "~/types/Global";
 import { useWindowStore } from "~/stores/useWindowWidth";
 import DesktopNavMenu from "~/components/DesktopNavMenu.vue";
 
+const drawerRef = ref();
 const windowStore = useWindowStore();
 const menuItems = ref<MenuItem[]>([]);
+
+const openMenu = () => {
+  drawerRef.value?.open();
+};
 
 onMounted(async () => {
   try {

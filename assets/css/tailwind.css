@@ -6,6 +6,10 @@
   body {
     @apply bg-primary-light dark:bg-primary-dark font-workSans text-primary-dark dark:text-white;
   }
+
+  .touch-none {
+    touch-action: none; /* 💡 important to allow e.preventDefault */
+  }
 }
 
 @layer components {

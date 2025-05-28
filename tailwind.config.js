@@ -45,6 +45,7 @@ export default {
         "2.5xl": "20px",
       },
       spacing: {
+        half: "50%",
         1.25: "5px",
         3.75: "15px",
         5.5: "22px",
