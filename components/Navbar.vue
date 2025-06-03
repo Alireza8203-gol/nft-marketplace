@@ -9,7 +9,7 @@
         />
       </NuxtLink>
 
-      <DesktopNavMenu :menu-items="menuItems" v-if="windowStore.width > 1110" />
+      <DesktopNavMenu :menu-items="menuItems" v-if="width" />
       <DrawerMenu
         v-else
         ref="drawerRef"
@@ -37,18 +37,27 @@ import DesktopNavMenu from "~/components/DesktopNavMenu.vue";
 const drawerRef = ref();
 const windowStore = useWindowStore();
 const menuItems = ref<MenuItem[]>([]);
+const width = computed(() => windowStore.width > 1110);
 
 const openMenu = () => {
   drawerRef.value?.open();
 };
+const handleResize = () => {
+  windowStore.updateWidth();
+};
 
 onMounted(async () => {
+  windowStore.initResizeListener();
   try {
     const res = await axios.get("api/menuItems");
     menuItems.value = res.data;
   } catch (error) {
     console.log("Error while fetching menuItems", error);
   }
+});
+
+onBeforeUnmount(() => {
+  windowStore.removeResizeListener();
 });
 
 // const changeTheme = () => {

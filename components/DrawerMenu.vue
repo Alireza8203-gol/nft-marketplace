@@ -12,10 +12,10 @@
     @touchmove="onTouchMove"
     @touchstart="onTouchStart"
     :class="[
-      'fixed flex items-stretch justify-stretch gap-x-2.5 py-10 z-20 text-end bg-secondary-dark transition-all duration-300 ease-in-out touch-none',
+      'fixed flex items-stretch justify-stretch gap-x-2.5 z-20 text-end bg-secondary-dark transition-all duration-300 ease-in-out touch-none',
       isVertical
-        ? 'top-0 right-0 h-full w-half rounded-l-2.5xl'
-        : 'flex-col  bottom-0 right-0 w-full h-half rounded-t-2.5xl',
+        ? 'top-0 right-0 h-full w-half py-10 rounded-l-2.5xl'
+        : 'flex-col  bottom-0 right-0 w-full h-half px-10 rounded-t-2.5xl',
       menuOpen
         ? isVertical
           ? 'translate-x-0'

@@ -8,5 +8,14 @@ export const useWindowStore = defineStore("window", () => {
     width.value = window.innerWidth;
   };
 
-  return { width, updateWidth };
+  const initResizeListener = () => {
+    updateWidth();
+    window.addEventListener("resize", updateWidth);
+  };
+
+  const removeResizeListener = () => {
+    window.removeEventListener("resize", updateWidth);
+  };
+
+  return { width, updateWidth, initResizeListener, removeResizeListener };
 });

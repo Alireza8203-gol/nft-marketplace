@@ -49,8 +49,7 @@ const updateVisibleNFTs = () => {
 };
 
 onMounted(async () => {
-  windowStore.updateWidth();
-  window.addEventListener("resize", windowStore.updateWidth);
+  windowStore.initResizeListener();
   try {
     const { data } = await axios.get("/api/allNFTs");
     allNFTsInfoArray.value = data;
@@ -60,8 +59,8 @@ onMounted(async () => {
   }
 });
 
-onUnmounted(() => {
-  window.removeEventListener("resize", windowStore.updateWidth);
+onBeforeUnmount(() => {
+  windowStore.removeResizeListener();
 });
 
 watch(
