@@ -2,7 +2,7 @@
   <div>
     <Header />
     <main>
-      <UnderDevelop />
+      <slot />
     </main>
     <Footer />
   </div>

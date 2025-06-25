@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>this is the marketplace page</h1>
+    <under-develop />
   </div>
 </template>
 

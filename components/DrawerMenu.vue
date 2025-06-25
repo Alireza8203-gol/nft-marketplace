@@ -31,7 +31,9 @@
         isVertical ? 'h-10 w-1 mx-4 my-auto' : 'w-10 h-1 my-4 mx-auto ',
       ]"
     ></span>
-    <div class="flex flex-col items-center justify-between gap-5 size-full">
+    <div
+      class="flex flex-col items-center justify-between gap-5 size-full tablet:pr-4"
+    >
       <ul class="flex flex-col items-stretch size-full gap-y-5">
         <li
           :key="menuItem.id"

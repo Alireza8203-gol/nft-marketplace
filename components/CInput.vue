@@ -1,5 +1,9 @@
 <template>
-  <input :type="props.type" :placeholder="props.placeholder" />
+  <input
+    :type="props.type"
+    :placeholder="props.placeholder"
+    class="text-primary-dark"
+  />
 </template>
 
 <script setup lang="ts">
@@ -14,3 +18,9 @@ const props = withDefaults(
   },
 );
 </script>
+
+<style scoped>
+input::placeholder {
+  @apply text-primary-dark;
+}
+</style>

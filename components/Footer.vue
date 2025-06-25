@@ -39,7 +39,9 @@
           </div>
         </div>
         <div class="flex flex-col text-custom-gray-light">
-          <h5 class="mb-6 font-bold text-1.5xl leading-160 text-white">
+          <h5
+            class="mb-6 font-spaceMono font-bold text-1.5xl leading-160 text-white"
+          >
             Explore
           </h5>
           <ul class="flex flex-col items-start gap-y-5 leading-140">
@@ -57,7 +59,9 @@
         <div
           class="col-span-5 flex flex-col items-start text-custom-gray-light"
         >
-          <h5 class="font-bold text-1.5xl leading-160 text-white">
+          <h5
+            class="font-spaceMono font-bold text-1.5xl leading-160 text-white"
+          >
             Join Our Weekly Digest
           </h5>
           <p

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>this is the connect wallet page</h1>
+    <under-develop />
   </div>
 </template>
 
