@@ -19,6 +19,7 @@
       </p>
       <form
         action=""
+        @submit.prevent="handleSubmit"
         class="flex flex-col items-start justify-start gap-y-3.75 desktop:max-w-[330px]"
       >
         <form-input
@@ -53,7 +54,50 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { registerNewUserSchema } from "~/schemas/registerNewUser";
+
+const errors = ref({});
+const form = ref({
+  username: "",
+  email: "",
+  password: "",
+  confirmPassword: "",
+});
+
+const toast = useToast();
+toast.settings({
+  theme: "dark",
+  timeout: 3000,
+  position: "topCenter",
+  iconColor: "#A259FF",
+  backgroundColor: "#3B3B3B",
+  progressBarColor: "#A259FF",
+  transitionIn: "fadeInRight",
+  transitionOut: "fadeOutLeft",
+  transitionInMobile: "fadeInRight",
+  transitionOutMobile: "fadeOutLeft",
+});
+
+const handleSubmit = () => {
+  const result = registerNewUserSchema.safeParse(form.value);
+  if (!result.success) {
+    errors.value = result.error.flatten().fieldErrors;
+    toast.error({
+      title: "Error! :(",
+      icon: "fa-solid fa-circle-xmark",
+      message: "New user sas NOT registered successfully!",
+    });
+  } else {
+    errors.value = {};
+    toast.success({
+      title: "Success!",
+      icon: "fa-circle-check",
+      message: "New User Was Registered Successfully!",
+    });
+  }
+};
+</script>
 
 <style scoped>
 .big-picture {

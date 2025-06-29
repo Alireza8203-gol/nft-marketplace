@@ -176,5 +176,27 @@
     "walletAddress": "0x9988776655441122",
     "totalSales": 39.45,
     "nfts": []
+  },
+  {
+    "id": "e617e9ed-f433-4578-8b35-fb3ccae3fe27",
+    "bio": "",
+    "name": "",
+    "nfts": [],
+    "email": "animakid@example.com",
+    "username": "Sahoooriii1998",
+    "profilePic": "",
+    "totalSales": 0,
+    "walletAddress": ""
+  },
+  {
+    "id": "60dfc39bf3adae55",
+    "bio": "",
+    "name": "",
+    "nfts": [],
+    "email": "Karim_dawg@example.com",
+    "username": "Karim1999",
+    "profilePic": "",
+    "totalSales": 0,
+    "walletAddress": ""
   }
 ]

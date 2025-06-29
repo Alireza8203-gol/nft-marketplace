@@ -3,6 +3,7 @@ export interface ArtistInfo {
   bio: string;
   name: string;
   nfts: string[];
+  email?: string;
   username: string;
   profilePic: string;
   totalSales: number;
