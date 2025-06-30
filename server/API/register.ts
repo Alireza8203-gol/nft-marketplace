@@ -79,6 +79,8 @@ export default defineEventHandler(async (event: H3Event) => {
 
   await writeFile(filePath, JSON.stringify(artists, null, 2));
 
+  event.node.res.statusCode = 201;
+
   return {
     message: "User created successfully",
     artist: newArtistInfo,

@@ -18,27 +18,30 @@
         NFTs.
       </p>
       <form
-        action=""
         @submit.prevent="handleSubmit"
         class="flex flex-col items-start justify-start gap-y-3.75 desktop:max-w-[330px]"
       >
         <form-input
           input-type="text"
+          v-model="form.username"
           input-placeholder="Username"
           icon-name="heroicons:user-16-solid"
         />
         <form-input
           input-type="email"
+          v-model="form.email"
           icon-name="heroicons:envelope"
           input-placeholder="Email Address"
         />
         <form-input
           input-type="password"
+          v-model="form.password"
           input-placeholder="Password"
           icon-name="heroicons:lock-closed"
         />
         <form-input
           input-type="password"
+          v-model="form.confirmPassword"
           icon-name="heroicons:lock-closed"
           input-placeholder="Confirm Password"
         />
@@ -55,10 +58,12 @@
 </template>
 
 <script setup lang="ts">
+import axios from "axios";
 import { registerNewUserSchema } from "~/schemas/registerNewUser";
 
+const router = useRouter();
 const errors = ref({});
-const form = ref({
+const form = reactive({
   username: "",
   email: "",
   password: "",
@@ -79,24 +84,71 @@ toast.settings({
   transitionOutMobile: "fadeOutLeft",
 });
 
-const handleSubmit = () => {
-  const result = registerNewUserSchema.safeParse(form.value);
+const handleSubmit = async () => {
+  const result = registerNewUserSchema.safeParse({ ...form });
   if (!result.success) {
     errors.value = result.error.flatten().fieldErrors;
-    toast.error({
-      title: "Error! :(",
-      icon: "fa-solid fa-circle-xmark",
-      message: "New user sas NOT registered successfully!",
+    const errorArray = Object.values(errors.value).flat();
+    errorArray.forEach((msg) => {
+      toast.error({
+        message: `${msg}`,
+        title: "Validation Error",
+        icon: "fa-solid fa-circle-xmark",
+      });
     });
   } else {
     errors.value = {};
-    toast.success({
-      title: "Success!",
-      icon: "fa-circle-check",
-      message: "New User Was Registered Successfully!",
-    });
+    try {
+      const { data } = await axios.post("/api/register", form);
+      toast.success({
+        title: "Success!",
+        message: "New User Was Registered Successfully!",
+      });
+      console.log("Request successful! here's the data:", data);
+      localStorage.setItem("showProfileReminder", "true");
+      setTimeout(async () => {
+        window.location.reload();
+      }, 3000);
+    } catch (error) {
+      console.log("Error during post request", error);
+    }
   }
 };
+
+onMounted(() => {
+  const shouldShowProfileReminderToast = localStorage.getItem(
+    "showProfileReminder",
+  );
+
+  if (shouldShowProfileReminderToast) {
+    toast.question({
+      zindex: 999,
+      timeout: 4000,
+      title: "There is More!!",
+      icon: "fa-solid fa-user-edit",
+      message: "You can complete your profile in your panel!",
+      buttons: [
+        [
+          "<button><b>See Profile</b></button>",
+          function (instance, toast) {
+            router.push("/");
+            localStorage.removeItem("showProfileReminder");
+            instance.hide({ transitionOut: "fadeOut" }, toast, "button");
+          },
+          true,
+        ],
+        [
+          "<button><b>No Thanks</b></button>",
+          function (instance, toast) {
+            localStorage.removeItem("showProfileReminder");
+            instance.hide({ transitionOut: "fadeOut" }, toast, "button");
+          },
+          true,
+        ],
+      ],
+    });
+  }
+});
 </script>
 
 <style scoped>
