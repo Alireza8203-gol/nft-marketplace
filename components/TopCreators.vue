@@ -35,12 +35,13 @@
 </template>
 
 <script setup lang="ts">
-import axios from "axios";
 import type { ArtistInfo } from "~/types/Global";
+import { useApiData } from "~/composables/useApiData";
 
 const windowStore = useWindowStore();
 const allArtists = ref<ArtistInfo[]>([]);
 const visibleArtists: Ref<ArtistInfo[] | []> = ref([]);
+const artistApi = useApiData<ArtistInfo[]>("/api/artists");
 
 const updateVisibleArtists = () => {
   visibleArtists.value = allArtists.value.slice(0, getSliceAmount());
@@ -54,13 +55,9 @@ const getSliceAmount = () => {
 onMounted(async () => {
   windowStore.updateWidth();
   window.addEventListener("resize", windowStore.updateWidth);
-  try {
-    const { data } = await axios.get("api/artists");
-    allArtists.value = data as ArtistInfo[];
-    updateVisibleArtists();
-  } catch (error) {
-    console.log("error during fetching data from API: ", error);
-  }
+  await artistApi.fetchData();
+  allArtists.value = artistApi.data.value as ArtistInfo[];
+  updateVisibleArtists();
 });
 
 onUnmounted(() => {

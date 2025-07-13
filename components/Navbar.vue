@@ -28,16 +28,16 @@
 </template>
 
 <script setup lang="ts">
-import axios from "axios";
 import { ref } from "vue";
 import type { MenuItem } from "~/types/Global";
-import { useWindowStore } from "~/stores/useWindowWidth";
+import { useApiData } from "~/composables/useApiData";
 import DesktopNavMenu from "~/components/DesktopNavMenu.vue";
 
 const drawerRef = ref();
 const windowStore = useWindowStore();
 const menuItems = ref<MenuItem[]>([]);
 const width = computed(() => windowStore.width > 1110);
+const menuApi = useApiData<MenuItem[]>("api/menuItems");
 
 const openMenu = () => {
   drawerRef.value?.open();
@@ -48,12 +48,8 @@ const handleResize = () => {
 
 onMounted(async () => {
   windowStore.initResizeListener();
-  try {
-    const res = await axios.get("api/menuItems");
-    menuItems.value = res.data;
-  } catch (error) {
-    console.log("Error while fetching menuItems", error);
-  }
+  await menuApi.fetchData();
+  menuItems.value = menuApi.data.value as MenuItem[];
 });
 
 onBeforeUnmount(() => {

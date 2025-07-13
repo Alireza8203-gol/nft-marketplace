@@ -45,19 +45,15 @@
 </template>
 
 <script setup lang="ts">
-import axios from "axios";
 import HeroAnimatedGif from "~/components/HeroAnimatedGif.vue";
 import type { StatusObj } from "~/types/Global";
+import { useApiData } from "~/composables/useApiData";
 
 const status = ref<StatusObj[]>([]);
+const statusApi = useApiData<StatusObj[]>("/api/status");
 
 onMounted(async () => {
-  try {
-    const response = await axios.get("http://localhost:4000/api/status");
-    // console.log(response.data);
-    status.value = response.data;
-  } catch (error) {
-    console.log("error from try/catch: ", error);
-  }
+  await statusApi.fetchData();
+  status.value = statusApi.data.value as StatusObj[];
 });
 </script>

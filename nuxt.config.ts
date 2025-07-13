@@ -49,4 +49,5 @@ export default defineNuxtConfig({
       ],
     },
   },
+  plugins: [{ src: "~/plugins/pinia-persisted.client.ts", mode: "client" }],
 });

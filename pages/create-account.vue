@@ -70,6 +70,7 @@ const form = reactive({
   confirmPassword: "",
 });
 
+const auth = useAuthStore();
 const toast = useToast();
 toast.settings({
   theme: "dark",
@@ -87,6 +88,9 @@ toast.settings({
 const handleSubmit = async () => {
   const result = registerNewUserSchema.safeParse({ ...form });
   if (!result.success) {
+    auth.isLoggedIn = false;
+    auth.userInfo.email = "";
+    auth.userInfo.username = "";
     errors.value = result.error.flatten().fieldErrors;
     const errorArray = Object.values(errors.value).flat();
     errorArray.forEach((msg) => {
@@ -98,6 +102,9 @@ const handleSubmit = async () => {
     });
   } else {
     errors.value = {};
+    auth.isLoggedIn = true;
+    auth.userInfo.email = form.email;
+    auth.userInfo.username = form.username;
     try {
       const { data } = await axios.post("/api/register", form);
       toast.success({

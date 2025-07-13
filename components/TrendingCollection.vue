@@ -26,17 +26,14 @@
 </template>
 
 <script setup lang="ts">
-import axios from "axios";
 import type { CollectionInfo } from "~/types/Global";
+import { useApiData } from "~/composables/useApiData";
 
 const trendingCollections = ref<CollectionInfo[] | []>([]);
+const trendingApi = useApiData<CollectionInfo[]>("/api/trending");
 
 onMounted(async () => {
-  try {
-    const { data } = await axios.get("/api/trending");
-    trendingCollections.value = data;
-  } catch (error) {
-    console.log("error fetching trending collections from api", error);
-  }
+  await trendingApi.fetchData();
+  trendingCollections.value = trendingApi.data.value as CollectionInfo[];
 });
 </script>

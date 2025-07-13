@@ -14,17 +14,14 @@
 </template>
 
 <script setup lang="ts">
-import axios from "axios";
 import type { CategoryInfo } from "~/types/Global";
+import { useApiData } from "~/composables/useApiData";
 
 const categoriesArray = ref<CategoryInfo[] | []>([]);
+const categoriesApi = useApiData<CategoryInfo[]>("/api/categories");
 
 onMounted(async () => {
-  try {
-    const { data } = await axios.get("/api/categories");
-    categoriesArray.value = data;
-  } catch (error) {
-    console.log("Error while fetching data from API: ", error);
-  }
+  await categoriesApi.fetchData();
+  categoriesArray.value = categoriesApi.data.value as CategoryInfo[];
 });
 </script>

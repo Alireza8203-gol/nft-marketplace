@@ -28,13 +28,13 @@
 </template>
 
 <script setup lang="ts">
-import axios from "axios";
 import type { NFTItem } from "~/types/Global";
-import { useWindowStore } from "~/stores/useWindowWidth";
+import { useApiData } from "~/composables/useApiData";
 
 const windowStore = useWindowStore();
 const allNFTsInfoArray = ref<NFTItem[] | []>([]);
 const visibleNFTsInfoArray = ref<NFTItem[] | []>([]);
+const nftApi = useApiData<NFTItem[]>("/api/allNFTs");
 
 const getSliceAmount = () => {
   if (windowStore.width < 750) return 3;
@@ -50,13 +50,9 @@ const updateVisibleNFTs = () => {
 
 onMounted(async () => {
   windowStore.initResizeListener();
-  try {
-    const { data } = await axios.get("/api/allNFTs");
-    allNFTsInfoArray.value = data;
-    updateVisibleNFTs();
-  } catch (error) {
-    console.log("Error while fetching data in the component: ", error);
-  }
+  await nftApi.fetchData();
+  allNFTsInfoArray.value = nftApi.data.value as NFTItem[];
+  updateVisibleNFTs();
 });
 
 onBeforeUnmount(() => {
