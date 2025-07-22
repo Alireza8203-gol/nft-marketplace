@@ -45,13 +45,28 @@
           </NuxtLink>
         </li>
       </ul>
-      <CButton
-        caption="Sign Up"
-        class="btn-sm w-full"
-        link-to="/create-account"
-      >
-        <Icon name="heroicons:user" class="size-5" />
-      </CButton>
+      <client-only>
+        <CButton
+          class="btn-sm w-full"
+          :caption="
+            props.userAuth.isLoggedIn
+              ? props.userAuth.userInfo.username
+              : 'Sign Up'
+          "
+          :link-to="
+            props.userAuth.isLoggedIn
+              ? `/users/${props.userAuth.userInfo.username}`
+              : '/create-account'
+          "
+        >
+          <Icon
+            class="size-7"
+            v-if="userAuth.isLoggedIn"
+            name="heroicons:user-circle-16-solid"
+          />
+          <Icon name="heroicons:user" class="size-5" v-else />
+        </CButton>
+      </client-only>
     </div>
   </div>
 </template>
@@ -63,6 +78,13 @@ import type { MenuItem } from "~/types/Global";
 const props = defineProps<{
   menuItems: MenuItem[];
   direction: "x" | "y";
+  userAuth: {
+    isLoggedIn: boolean;
+    userInfo: {
+      username: string;
+      email: string;
+    };
+  };
 }>();
 
 const touchStart = ref(0);

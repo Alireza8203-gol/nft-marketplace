@@ -45,6 +45,31 @@
     @apply border-none;
   }
 
+  .table-row-grid {
+    @apply flex items-center w-full my-10 py-3 border rounded-2.5xl border-secondary-dark font-normal text-xs leading-extra-tight text-custom-gray;
+  }
+
+  .table-cell-grid {
+    @apply flex items-center justify-start gap-x-2.5 w-fit;
+  }
+
+  /*w-172.5*/
+  @screen tablet {
+    .table-row-grid {
+      @apply px-5 text-base leading-140;
+    }
+
+    .table-cell-grid {
+      @apply gap-x-5;
+    }
+  }
+
+  @screen desktop {
+    .table-row-grid {
+      @apply gap-x-15 px-5 text-base leading-140;
+    }
+  }
+
   /*background: linear-gradient(*/
   /*  180deg,*/
   /*  rgba(162.00005114078522, 89.00000989437103, 255, 0) 0%,*/

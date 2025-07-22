@@ -53,15 +53,9 @@ const getSliceAmount = () => {
 };
 
 onMounted(async () => {
-  windowStore.updateWidth();
-  window.addEventListener("resize", windowStore.updateWidth);
   await artistApi.fetchData();
   allArtists.value = artistApi.data.value as ArtistInfo[];
   updateVisibleArtists();
-});
-
-onUnmounted(() => {
-  window.removeEventListener("resize", windowStore.updateWidth);
 });
 
 watch(

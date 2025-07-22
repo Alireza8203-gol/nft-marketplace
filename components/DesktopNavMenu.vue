@@ -11,9 +11,28 @@
         </NuxtLink>
       </li>
     </ul>
-    <CButton caption="Sign Up" class="btn-sm" link-to="/create-account">
-      <Icon name="heroicons:user" class="size-5" />
-    </CButton>
+    <client-only>
+      <CButton
+        class="btn-sm"
+        :link-to="
+          props.userAuth.isLoggedIn
+            ? `/users/${props.userAuth.userInfo.username}`
+            : '/create-account'
+        "
+        :caption="
+          props.userAuth.isLoggedIn
+            ? props.userAuth.userInfo.username
+            : 'Sign Up'
+        "
+      >
+        <Icon
+          class="size-7"
+          v-if="userAuth.isLoggedIn"
+          name="heroicons:user-circle-16-solid"
+        />
+        <Icon name="heroicons:user" class="size-5" v-else />
+      </CButton>
+    </client-only>
   </div>
 </template>
 
@@ -22,5 +41,12 @@ import type { MenuItem } from "~/types/Global";
 
 const props = defineProps<{
   menuItems: MenuItem[];
+  userAuth: {
+    isLoggedIn: boolean;
+    userInfo: {
+      username: string;
+      email: string;
+    };
+  };
 }>();
 </script>

@@ -44,19 +44,14 @@ const getSliceAmount = () => {
 const updateVisibleNFTs = () => {
   visibleNFTsInfoArray.value = allNFTsInfoArray.value.slice(
     0,
-    getSliceAmount(),
+    getSliceAmount()
   );
 };
 
 onMounted(async () => {
-  windowStore.initResizeListener();
   await nftApi.fetchData();
   allNFTsInfoArray.value = nftApi.data.value as NFTItem[];
   updateVisibleNFTs();
-});
-
-onBeforeUnmount(() => {
-  windowStore.removeResizeListener();
 });
 
 watch(
@@ -64,6 +59,6 @@ watch(
   () => {
     updateVisibleNFTs();
   },
-  { immediate: true },
+  { immediate: true }
 );
 </script>

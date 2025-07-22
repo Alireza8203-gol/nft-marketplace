@@ -9,10 +9,15 @@
         />
       </NuxtLink>
 
-      <DesktopNavMenu :menu-items="menuItems" v-if="width" />
+      <DesktopNavMenu
+        v-if="width"
+        :user-auth="userAuth"
+        :menu-items="menuItems"
+      />
       <DrawerMenu
         v-else
         ref="drawerRef"
+        :user-auth="userAuth"
         :menu-items="menuItems"
         :direction="windowStore.width >= 750 ? 'y' : 'x'"
       />
@@ -29,11 +34,13 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
+import { useAuthStore } from "~/stores/auth";
 import type { MenuItem } from "~/types/Global";
 import { useApiData } from "~/composables/useApiData";
 import DesktopNavMenu from "~/components/DesktopNavMenu.vue";
 
 const drawerRef = ref();
+const userAuth = useAuthStore();
 const windowStore = useWindowStore();
 const menuItems = ref<MenuItem[]>([]);
 const width = computed(() => windowStore.width > 1110);
@@ -42,18 +49,10 @@ const menuApi = useApiData<MenuItem[]>("api/menuItems");
 const openMenu = () => {
   drawerRef.value?.open();
 };
-const handleResize = () => {
-  windowStore.updateWidth();
-};
 
 onMounted(async () => {
-  windowStore.initResizeListener();
   await menuApi.fetchData();
   menuItems.value = menuApi.data.value as MenuItem[];
-});
-
-onBeforeUnmount(() => {
-  windowStore.removeResizeListener();
 });
 
 // const changeTheme = () => {
