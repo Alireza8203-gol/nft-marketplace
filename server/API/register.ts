@@ -2,7 +2,7 @@ import { join } from "path";
 import { randomBytes } from "node:crypto";
 import { ArtistInfo } from "~/types/Global";
 import { readFile, writeFile } from "fs/promises";
-import { H3Event, readBody, sendError, createError } from "h3";
+import { createError, H3Event, readBody, sendError } from "h3";
 
 // ✅ Define the input type
 type RegisterBody = {

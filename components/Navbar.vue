@@ -1,11 +1,11 @@
 <template>
   <nav>
     <div
-      class="flex items-center justify-between py-[15px] desktop:py-5 px-7.5 tablet:px-[50px] text-primary-dark dark:text-white font-semibold"
+      class="flex items-center justify-between desktop:py-5 font-semibold py-[15px] px-7.5 tablet:px-[50px] text-primary-dark dark:text-white"
     >
       <NuxtLink to="/">
         <LogoIcon
-          class="w-[182.56px] h-6 desktop:w-[243.41px] desktop:h-8 text-primary-dark dark:text-white"
+          class="h-6 desktop:h-8 w-[182.56px] desktop:w-[243.41px] text-primary-dark dark:text-white"
         />
       </NuxtLink>
 

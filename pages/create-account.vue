@@ -4,15 +4,15 @@
   >
     <div class="big-picture aspect-[3/2] tablet:aspect-[6/7]"></div>
     <div
-      class="max-w-[315px] tablet:max-w-[325px] desktop:max-w-[460px] mx-auto py-7.5 tablet:py-0"
+      class="mx-auto tablet:py-0 max-w-[315px] tablet:max-w-[325px] desktop:max-w-[460px] py-7.5"
     >
       <h2
-        class="font-semibold text-4.2xl desktop:text-5.1xl leading-extra-tight desktop:leading-extra-tight text-white"
+        class="font-semibold text-white text-4.2xl desktop:text-5.1xl leading-extra-tight desktop:leading-extra-tight"
       >
         Create account
       </h2>
       <p
-        class="mt-5 mb-7.5 tablet:mb-10 font-normal text-base desktop:text-1.5xl leading-140 desktop:leading-160"
+        class="mt-5 tablet:mb-10 text-base font-normal mb-7.5 desktop:text-1.5xl leading-140 desktop:leading-160"
       >
         Welcome! enter your details and start creating, collecting and selling
         NFTs.
@@ -48,7 +48,7 @@
 
         <button
           type="submit"
-          class="flex items-center justify-center w-full py-3 mt-3.75 rounded-2.5xl font-semibold text-base leading-140 text-white bg-pink"
+          class="flex w-full items-center justify-center py-3 text-base font-semibold text-white mt-3.75 rounded-2.5xl leading-140 bg-pink"
         >
           Create account
         </button>

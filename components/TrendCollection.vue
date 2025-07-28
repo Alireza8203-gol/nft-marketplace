@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col items-center gap-y-3.75">
-    <div class="grid grid-rows-4 grid-cols-3 items-center gap-3.75">
+    <div class="grid grid-cols-3 grid-rows-4 items-center gap-3.75">
       <NuxtImg
         :src="src"
         :key="index"
@@ -13,11 +13,11 @@
       <CButton
         link-to="/"
         caption="1025+"
-        class="size-full font-spaceMono font-bold text-base leading-140 tablet:text-1.5xl tablet:leading-160"
+        class="text-base font-bold size-full font-spaceMono leading-140 tablet:text-1.5xl tablet:leading-160"
       />
     </div>
-    <div class="flex flex-col items-start gap-y-2.5 w-full">
-      <h5 class="font-workSans font-semibold text-1.5xl leading-140">
+    <div class="flex w-full flex-col items-start gap-y-2.5">
+      <h5 class="font-semibold font-workSans text-1.5xl leading-140">
         {{ collectionInfo.collectionTitle }}
       </h5>
       <ArtistProfileSmall :artist-info="props.collectionInfo.artist" />

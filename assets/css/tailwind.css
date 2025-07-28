@@ -46,7 +46,7 @@
   }
 
   .table-row-grid {
-    @apply flex items-center w-full my-10 py-3 border rounded-2.5xl border-secondary-dark font-normal text-xs leading-extra-tight text-custom-gray;
+    @apply flex items-center w-full my-5 py-3 border rounded-2.5xl border-secondary-dark font-normal text-xs leading-extra-tight text-custom-gray;
   }
 
   .table-cell-grid {
@@ -68,6 +68,10 @@
     .table-row-grid {
       @apply gap-x-15 px-5 text-base leading-140;
     }
+  }
+
+  .filtering {
+    @apply flex items-center justify-center py-5 text-base font-semibold desktop:py-3.75 desktop:text-1.5xl leading-140 text-custom-gray;
   }
 
   /*background: linear-gradient(*/

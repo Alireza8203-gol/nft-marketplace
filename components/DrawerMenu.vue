@@ -32,13 +32,13 @@
       ]"
     ></span>
     <div
-      class="flex flex-col items-center justify-between gap-5 size-full tablet:pr-4"
+      class="flex flex-col items-center justify-between gap-5 tablet:pr-4 size-full"
     >
-      <ul class="flex flex-col items-stretch size-full gap-y-5">
+      <ul class="flex flex-col items-stretch gap-y-5 size-full">
         <li
           :key="menuItem.id"
           v-for="menuItem in menuItems"
-          class="flex items-center justify-center flex-shrink py-3 px-5"
+          class="flex flex-shrink items-center justify-center px-5 py-3"
         >
           <NuxtLink :to="menuItem.path" class="text-2.3xl">
             {{ menuItem.title }}
@@ -47,7 +47,7 @@
       </ul>
       <client-only>
         <CButton
-          class="btn-sm w-full"
+          class="w-full btn-sm"
           :caption="
             props.userAuth.isLoggedIn
               ? props.userAuth.userInfo.username

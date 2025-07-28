@@ -1,7 +1,7 @@
 <template>
-  <div class="flex flex-col items-center tablet:items-start">
+  <div class="flex flex-col tablet:items-start items-center">
     <h4
-      class="font-spaceMono font-bold text-[22px] leading-160 desktop:text-[28px] desktop:leading-[1.4]"
+      class="font-bold font-spaceMono text-[22px] leading-160 desktop:text-[28px] desktop:leading-[1.4]"
     >
       {{ props.statusInfo }}
     </h4>

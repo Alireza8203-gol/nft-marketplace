@@ -37,6 +37,7 @@ export default {
         pink: "#A259FF",
         "custom-gray": "#858584",
         "primary-dark": "#2B2B2B",
+        "custom-green": "#00AC4F",
         "primary-light": "#D4D4D4",
         "secondary-dark": "#3B3B3B",
         "custom-gray-light": "#CCCCCC",

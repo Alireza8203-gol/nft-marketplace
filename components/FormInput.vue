@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex items-center gap-x-3 w-full py-3 px-5 rounded-2.5xl border border-t-custom-gray bg-white"
+    class="flex w-full items-center gap-x-3 border bg-white px-5 py-3 rounded-2.5xl border-t-custom-gray"
   >
     <Icon :name="props.iconName" class="text-custom-gray-light" />
     <input
@@ -8,7 +8,7 @@
       :type="props.inputType"
       :value="props.modelValue"
       :placeholder="props.inputPlaceholder"
-      class="text-primary-dark border-none outline-none"
+      class="border-none outline-none text-primary-dark"
     />
     <!--  === 'password' && show ? 'text' : 'password' -->
     <button @click="show = !show">

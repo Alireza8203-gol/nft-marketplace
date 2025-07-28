@@ -3,10 +3,10 @@
     <NuxtLink to="/">
       <NuxtImg
         :src="`/images/avatars/${props.artistInfo?.profilePic}`"
-        class="size-6 rounded-2.5xl overflow-hidden hover:scale-95 transition-transform duration-300"
+        class="overflow-hidden transition-transform duration-300 size-6 rounded-2.5xl hover:scale-95"
       />
     </NuxtLink>
-    <p class="font-workSans font-normal text-base leading-140">
+    <p class="text-base font-normal font-workSans leading-140">
       {{ artistInfo?.username }}
     </p>
   </div>

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="glass-effect flex flex-col items-center justify-center gap-y-2.5 w-full p-7.5 rounded-2.5xl text-white"
+    class="flex w-full flex-col items-center justify-center text-white glass-effect gap-y-2.5 p-7.5 rounded-2.5xl"
   >
     <p class="self-start text-xs leading-extra-tight">Auction ends in:</p>
     <div class="flex items-start gap-x-2.5 font-spaceMono">
@@ -29,6 +29,7 @@
 
 <script setup lang="ts">
 import { useCountdown } from "@/composables/useCountdown";
+
 const { days, hours, minutes, seconds, isEnded } = useCountdown(
   new Date("2025-06-01T00:00:00").getTime(),
 );
@@ -43,7 +44,7 @@ const { days, hours, minutes, seconds, isEnded } = useCountdown(
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 .countdown-number {
-  @apply text-4.2xl font-bold leading-tight;
+  @apply font-bold leading-tight text-4.2xl;
 }
 .countdown-number-caption {
   @apply text-xs leading-extra-tight;

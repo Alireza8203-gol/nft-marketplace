@@ -3,34 +3,34 @@
     <div class="gradient-div">
       <div class="container h-full">
         <div
-          class="flex flex-col tablet:flex-row items-stretch tablet:items-end justify-end tablet:justify-between gap-2.5 h-full pb-10 tablet:pb-15"
+          class="flex h-full tablet:flex-row flex-col tablet:items-end items-stretch justify-end tablet:justify-between pb-10 tablet:pb-15 gap-2.5"
         >
           <div class="flex flex-col gap-7.5">
             <ArtistProfileSmall
               :artist-info="artistInfo"
-              class="w-fit py-2.5 px-5 bg-secondary-dark rounded-2.5xl"
+              class="w-fit px-5 py-2.5 bg-secondary-dark rounded-2.5xl"
             />
             <h3
-              class="text-4.2xl desktop:text-5.1xl leading-tight desktop:leading-140 font-semibold text-white"
+              class="font-semibold leading-tight text-white text-4.2xl desktop:text-5.1xl desktop:leading-140"
             >
               Magic Mashrooms
             </h3>
             <CButton
               link-to="/"
               caption="See NFT"
-              class="hidden tablet:flex btn btn-lg leading-140 bg-white text-primary-dark"
+              class="tablet:flex hidden bg-white btn btn-lg leading-140 text-primary-dark"
             >
               <Icon name="heroicons:eye" class="size-5 text-pink" />
             </CButton>
           </div>
           <div
-            class="flex flex-col tablet:flex-row items-end justify-stretch gap-7.5"
+            class="flex tablet:flex-row flex-col items-end justify-stretch gap-7.5"
           >
             <CountdownClock />
             <CButton
               link-to="/"
               caption="See NFT"
-              class="tablet:hidden btn btn-lg leading-140 bg-white text-primary-dark"
+              class="tablet:hidden bg-white btn btn-lg leading-140 text-primary-dark"
             >
               <Icon name="heroicons:eye" class="size-5 text-pink" />
             </CButton>

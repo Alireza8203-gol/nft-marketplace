@@ -1,7 +1,7 @@
 <template>
   <page-section class="">
     <div class="container">
-      <h1 class="text-5xl text-center font-bold">{{ userId }}</h1>
+      <h1 class="text-center text-5xl font-bold">{{ userId }}</h1>
     </div>
   </page-section>
 </template>

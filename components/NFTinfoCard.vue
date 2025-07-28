@@ -20,15 +20,19 @@
           {{ nftsInfo?.name }}
         </h5>
         <ArtistProfileSmall v-if="artist" :artist-info="artist" />
-        <div v-else-if="pending" class="text-sm text-gray-400">Loading artist...</div>
-        <div v-else-if="error" class="text-sm text-red-400">Error loading artist</div>
+        <div v-else-if="pending" class="text-sm text-gray-400">
+          Loading artist...
+        </div>
+        <div v-else-if="error" class="text-sm text-red-400">
+          Error loading artist
+        </div>
       </div>
-      <div class="flex items-center justify-between w-full">
+      <div class="flex w-full items-center justify-between">
         <div class="flex flex-col items-start gap-y-2">
           <span class="text-xs leading-extra-tight text-custom-gray">
             Price
           </span>
-          <p class="font-spaceMono font-normal leading-140">
+          <p class="font-normal font-spaceMono leading-140">
             {{ nftsInfo?.price }} {{ nftsInfo?.currency }}
           </p>
         </div>
@@ -36,7 +40,7 @@
           <span class="text-xs leading-extra-tight text-custom-gray">
             Highest Bid
           </span>
-          <p class="font-spaceMono font-normal leading-140">
+          <p class="font-normal font-spaceMono leading-140">
             0.33 {{ nftsInfo?.currency }}
           </p>
         </div>
@@ -47,7 +51,7 @@
 
 <script setup lang="ts">
 import type { NFTItem } from "~/types/Global";
-import { useArtist } from '~/composables/useArtist';
+import { useFindArtist } from "~/composables/useFindArtist";
 
 const props = withDefaults(
   defineProps<{
@@ -59,5 +63,7 @@ const props = withDefaults(
   },
 );
 
-const { artist, pending, error } = useArtist(props.nftsInfo?.creatorId || '');
+const { artist, pending, error } = useFindArtist(
+  props.nftsInfo?.creatorId || "",
+);
 </script>

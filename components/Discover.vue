@@ -8,7 +8,7 @@
         <CButton
           link-to="/"
           caption="See All"
-          class="btn btn-lg btn-outline self-end hidden tablet:flex"
+          class="tablet:flex hidden self-end btn btn-lg btn-outline"
         >
           <Icon name="heroicons:eye" class="size-5 text-pink" />
         </CButton>
@@ -44,7 +44,7 @@ const getSliceAmount = () => {
 const updateVisibleNFTs = () => {
   visibleNFTsInfoArray.value = allNFTsInfoArray.value.slice(
     0,
-    getSliceAmount()
+    getSliceAmount(),
   );
 };
 
@@ -59,6 +59,6 @@ watch(
   () => {
     updateVisibleNFTs();
   },
-  { immediate: true }
+  { immediate: true },
 );
 </script>

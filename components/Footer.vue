@@ -1,15 +1,15 @@
 <template>
-  <footer class="bg-secondary-dark py-10">
+  <footer class="py-10 bg-secondary-dark">
     <div class="container">
       <!-- grid grid-cols-1 desktop:grid-cols-12 -->
       <div
-        class="flex flex-col desktop:flex-row items-start justify-between gap-7.5"
+        class="flex desktop:flex-row flex-col items-start justify-between gap-7.5"
       >
-        <div class="flex flex-col desktop:w-60 text-custom-gray-light">
+        <div class="flex desktop:w-60 flex-col text-custom-gray-light">
           <LogoIcon
-            class="w-[182.56px] h-6 desktop:w-[243.41px] desktop:h-8 text-primary-dark dark:text-white"
+            class="h-6 desktop:h-8 w-[182.56px] desktop:w-[243.41px] text-primary-dark dark:text-white"
           />
-          <p class="mt-7.5 mb-5 leading-140">
+          <p class="mb-5 mt-7.5 leading-140">
             NFT marketplace UI created with Anima for Figma
           </p>
           <div class="flex flex-col items-start gap-y-3.75">
@@ -40,7 +40,7 @@
         </div>
         <div class="flex flex-col text-custom-gray-light">
           <h5
-            class="mb-6 font-spaceMono font-bold text-1.5xl leading-160 text-white"
+            class="mb-6 font-bold text-white font-spaceMono text-1.5xl leading-160"
           >
             Explore
           </h5>
@@ -60,12 +60,12 @@
           class="col-span-5 flex flex-col items-start text-custom-gray-light"
         >
           <h5
-            class="font-spaceMono font-bold text-1.5xl leading-160 text-white"
+            class="font-bold text-white font-spaceMono text-1.5xl leading-160"
           >
             Join Our Weekly Digest
           </h5>
           <p
-            class="desktop:w-80 my-5 desktop:mt-6 font-normal text-base leading-140"
+            class="my-5 desktop:mt-6 desktop:w-80 text-base font-normal leading-140"
           >
             Get exclusive promotions & updates straight to your inbox.
           </p>
@@ -73,7 +73,7 @@
             <form
               action=""
               method="post"
-              class="flex flex-col tablet:flex-row items-center justify-center gap-y-4 rounded-2.5xl tablet:bg-white overflow-hidden"
+              class="flex tablet:flex-row flex-col items-center justify-center gap-y-4 overflow-hidden tablet:bg-white rounded-2.5xl"
             >
               <c-input
                 type="email"
@@ -82,9 +82,9 @@
               />
               <button
                 type="submit"
-                class="btn btn-lg w-full py-3 desktop:py-5 leading-140"
+                class="w-full py-3 desktop:py-5 btn btn-lg leading-140"
               >
-                <Icon name="heroicons:envelope" class="size-5 text-white" />
+                <Icon name="heroicons:envelope" class="text-white size-5" />
                 Subscribe
               </button>
             </form>
@@ -92,7 +92,7 @@
         </div>
       </div>
       <div
-        class="flex items-end justify-start mt-7.5 pt-5 border-t border-t-custom-gray"
+        class="flex items-end justify-start border-t pt-5 mt-7.5 border-t-custom-gray"
       >
         <p class="text-xs leading-extra-tight text-custom-gray-light">
           Ⓒ NFT Market. Use this template freely.

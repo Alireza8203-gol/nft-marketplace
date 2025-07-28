@@ -8,13 +8,13 @@
         <CButton
           link-to="/"
           caption="View Rankings"
-          class="btn-lg btn-outline self-end hidden tablet:flex"
+          class="tablet:flex hidden self-end btn-lg btn-outline"
         >
           <Icon name="heroicons:rocket-launch" class="size-5 text-pink" />
         </CButton>
       </SectionHeader>
       <div
-        class="grid grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-4 grid-rows-5 tablet:grid-rows-3 gap-7.5 mb-10 overflow-hidden"
+        class="mb-10 grid grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-4 tablet:grid-rows-3 grid-rows-5 overflow-hidden gap-7.5"
       >
         <CreatorCard
           :index="index"
@@ -26,7 +26,7 @@
       <CButton
         link-to="/"
         caption="View Rankings"
-        class="btn-lg btn-outline self-end tablet:hidden"
+        class="tablet:hidden self-end btn-lg btn-outline"
       >
         <Icon name="heroicons:rocket-launch" class="size-5 text-pink" />
       </CButton>

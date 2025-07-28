@@ -6,7 +6,7 @@
         subtitle="Find out how to get started"
       />
       <div
-        class="flex flex-col tablet:flex-row flex-wrap items-stretch gap-y-5 gap-x-7.5"
+        class="flex tablet:flex-row flex-col flex-wrap items-stretch gap-y-5 gap-x-7.5"
       >
         <InfoCard
           image-src="/images/svg-images/setup-your-wallet.svg"

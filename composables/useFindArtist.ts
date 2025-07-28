@@ -1,8 +1,12 @@
+/*
+ * find the artist for the NFT, by providing the NFT's ID
+ */
+
+import axios from "axios";
 import { ref } from "vue";
 import type { ArtistInfo } from "~/types/Global";
-import axios from "axios";
 
-export const useArtist = (id: string) => {
+export const useFindArtist = (id: string) => {
   const pending = ref(true);
   const error = ref<unknown>(null);
   const artist = ref<ArtistInfo | null>(null);
