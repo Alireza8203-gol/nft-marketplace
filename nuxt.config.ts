@@ -14,6 +14,10 @@ export default defineNuxtConfig({
   devServer: {
     port: 4000,
   },
+  ssr: true,
+  nitro: {
+    preset: "node", // this is key for Liara!
+  },
   colorMode: {
     fallback: "light", // fallback value if not system preference found
     preference: "dark", // default value of $colorMode.preference. could be system as well
