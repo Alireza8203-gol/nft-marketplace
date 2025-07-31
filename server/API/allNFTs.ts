@@ -1,17 +1,16 @@
-import { join } from "path";
-import { readFile } from "fs/promises";
 import { NFTItem } from "~/types/Global";
 
 export default defineEventHandler(
-  async (): Promise<NFTItem[] | { error: "Failed to read data" }> => {
+  async (): Promise<
+    NFTItem[] | { error: "Fetching Data form json file failed :(" }
+  > => {
     try {
-      // Get the file path and read JSON file
-      const filePath = join(process.cwd(), "server/data/NFTs.json");
-      const data = await readFile(filePath, "utf-8");
-      // Parse and return data
-      return JSON.parse(data) as NFTItem[];
+      const data = await $fetch(
+        `${process.env.NUXT_PUBLIC_API_BASE}/data/NFTs.json`,
+      );
+      return data as NFTItem[];
     } catch (error) {
-      return { error: "Failed to read data" };
+      return { error: "Fetching Data form json file failed :(" };
     }
   },
 );

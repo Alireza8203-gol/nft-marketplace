@@ -20,6 +20,7 @@
       >
         <input
           type="text"
+          v-model="searchQuery"
           placeholder="Search your favourite NFTs"
           class="w-full bg-transparent text-white outline-none"
         />
@@ -29,8 +30,8 @@
         />
       </div>
       <div class="grid grid-cols-2 grid-rows-1">
-        <div class="filtering active">NFTs</div>
-        <div class="filtering">Collections</div>
+        <div class="filtering active" @click="addActiveClass">NFTs</div>
+        <div class="filtering" @click="addActiveClass">Collections</div>
       </div>
     </div>
   </section>
@@ -39,27 +40,65 @@
       <div
         class="grid grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-3 gap-y-5 py-10 tablet:py-15 gap-x-7.5"
       >
-        <NFTinfoCard
-          :key="NFT.id"
-          :nfts-info="NFT"
-          variant="darker"
-          v-for="NFT in nftsArray"
-        />
+        <suspense>
+          <template #default>
+            <NFTinfoCard
+              :key="NFT.id"
+              variant="darker"
+              :nfts-info="NFT"
+              v-for="NFT in filteredNfts"
+              v-if="showingTab === 'NFTs'"
+            />
+            <TrendCollection
+              :key="index"
+              :collection-info="collection"
+              v-else-if="showingTab === 'Collections'"
+              v-for="(collection, index) in collectionsArray"
+            />
+          </template>
+          <template #fallback>
+            <div class="">Loading Top Subscribe NFT...</div>
+          </template>
+        </suspense>
       </div>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-import type { NFTItem } from "~/types/Global";
 import { useApiData } from "~/composables/useApiData";
+import type { CollectionInfo, NFTItem } from "~/types/Global";
+import { useActiveClass } from "~/composables/useActiveClass";
 
+const NFTinfoCard = defineAsyncComponent(
+  () => import("@/components/NFTinfoCard.vue"),
+);
+
+const searchQuery = ref<string>("");
+const showingTab = ref<string>("NFTs");
 const nftsArray = ref<NFTItem[] | []>([]);
+const collectionsArray = ref<CollectionInfo[] | []>([]);
 const nftApiCall = useApiData<NFTItem[]>("/api/allNFTs");
+const trendingApi = useApiData<CollectionInfo[]>("/api/collections");
+
+const filteredNfts = computed(() => {
+  if (!searchQuery.value) return nftsArray.value;
+  return nftsArray.value.filter((NFT) => {
+    return NFT.name.toLowerCase().includes(searchQuery.value.toLowerCase());
+  });
+});
+
+const addActiveClass = (e) => {
+  const chosenTab = useActiveClass(e) as string;
+  showingTab.value = chosenTab;
+  console.log(chosenTab);
+};
 
 onMounted(async () => {
   await nftApiCall.fetchData();
+  await trendingApi.fetchData();
   nftsArray.value = nftApiCall.data.value as NFTItem[];
+  collectionsArray.value = trendingApi.data.value as CollectionInfo[];
 });
 </script>
 

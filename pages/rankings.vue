@@ -20,26 +20,16 @@
   <section>
     <div class="container">
       <div class="grid grid-cols-4 grid-rows-1">
-        <div
-          class="flex items-center justify-center py-5 text-base font-semibold desktop:py-3.75 desktop:text-1.5xl leading-140 text-custom-gray active"
-        >
+        <div class="filtering active" @click="useActiveClass">
           {{ windowStore.width < 750 ? "1d" : "Today" }}
         </div>
-        <div
-          class="flex items-center justify-center py-5 text-base font-semibold desktop:py-3.75 desktop:text-1.5xl leading-140 text-custom-gray"
-        >
+        <div class="filtering" @click="useActiveClass">
           {{ windowStore.width < 750 ? "7d" : "This Week" }}
         </div>
-        <div
-          class="flex items-center justify-center py-5 text-base font-semibold desktop:py-3.75 desktop:text-1.5xl leading-140 text-custom-gray"
-        >
+        <div class="filtering" @click="useActiveClass">
           {{ windowStore.width < 750 ? "30d" : "This Month" }}
         </div>
-        <div
-          class="flex items-center justify-center py-5 text-base font-semibold desktop:py-3.75 desktop:text-1.5xl leading-140 text-custom-gray"
-        >
-          All Time
-        </div>
+        <div class="filtering" @click="useActiveClass">All Time</div>
       </div>
     </div>
   </section>
@@ -104,6 +94,7 @@
 <script setup lang="ts">
 import type { ArtistInfo } from "~/types/Global";
 import { useApiData } from "~/composables/useApiData";
+import { useActiveClass } from "~/composables/useActiveClass";
 
 const windowStore = useWindowStore();
 const artistsArray = ref<ArtistInfo[] | []>([]);
@@ -112,7 +103,6 @@ const artistsApi = useApiData<ArtistInfo[]>("/api/artists");
 onMounted(async () => {
   await artistsApi.fetchData();
   artistsArray.value = artistsApi.data.value as ArtistInfo[];
-  console.log(artistsArray.value);
 });
 </script>
 

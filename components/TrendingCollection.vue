@@ -30,10 +30,13 @@ import type { CollectionInfo } from "~/types/Global";
 import { useApiData } from "~/composables/useApiData";
 
 const trendingCollections = ref<CollectionInfo[] | []>([]);
-const trendingApi = useApiData<CollectionInfo[]>("/api/trending");
+const trendingApi = useApiData<CollectionInfo[]>("/api/collections");
 
 onMounted(async () => {
   await trendingApi.fetchData();
-  trendingCollections.value = trendingApi.data.value as CollectionInfo[];
+  trendingCollections.value = trendingApi.data.value?.slice(
+    0,
+    3,
+  ) as CollectionInfo[];
 });
 </script>

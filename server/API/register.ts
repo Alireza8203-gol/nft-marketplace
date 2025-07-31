@@ -6,8 +6,8 @@ import { createError, H3Event, readBody, sendError } from "h3";
 
 // ✅ Define the input type
 type RegisterBody = {
-  username: string;
   email: string;
+  username: string;
   password: string;
   confirmPassword: string;
 };
@@ -26,7 +26,7 @@ export default defineEventHandler(async (event: H3Event) => {
     );
   }
 
-  const filePath = join(process.cwd(), "server", "data", "artists.json");
+  const filePath = join(process.cwd(), "data", "artists.json");
   let artists: ArtistInfo[] = [];
 
   try {

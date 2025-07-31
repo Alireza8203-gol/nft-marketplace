@@ -1,0 +1,119 @@
+[
+  {
+    "id": "28945f1b",
+    "collectionTitle": "DSGN Animals",
+    "imagesSrc": [
+      "/images/colorful-dog-min.webp",
+      "/images/trending/trending-mouse-min.webp",
+      "/images/trending/trending-colorful-bear-min.webp"
+    ],
+    "artist": {
+      "username": "MrFox",
+      "profilePic": "avatar6-min.png"
+    }
+  },
+  {
+    "id": "35bbd432",
+    "collectionTitle": "Magic Mushrooms",
+    "imagesSrc": [
+      "/images/giant-mushroom-min.webp",
+      "/images/trending/trending-mushroom1-min.webp",
+      "/images/trending/trending-mushroom2-min.webp"
+    ],
+    "artist": {
+      "username": "Shroomie",
+      "profilePic": "avatar7-min.png"
+    }
+  },
+  {
+    "id": "984a07a3",
+    "collectionTitle": "Disco Machines",
+    "imagesSrc": [
+      "/images/trending/trending-robot-min.webp",
+      "/images/trending/trending-robot2-min.webp",
+      "/images/trending/trending-robot3-min.webp"
+    ],
+    "artist": {
+      "username": "BeKind2Robots",
+      "profilePic": "avatar15-min.png"
+    }
+  },
+  {
+    "id": "a81c0b3e",
+    "collectionTitle": "Neon Beasts",
+    "imagesSrc": [
+      "/images/colorful-dog-min.webp",
+      "/images/trending/trending-mouse-min.webp",
+      "/images/trending/trending-colorful-bear-min.webp"
+    ],
+    "artist": {
+      "username": "LunaWolf",
+      "profilePic": "avatar1-min.png"
+    }
+  },
+  {
+    "id": "f53d7a19",
+    "collectionTitle": "Crypto Critters",
+    "imagesSrc": [
+      "/images/colorful-dog-min.webp",
+      "/images/trending/trending-mouse-min.webp",
+      "/images/trending/trending-colorful-bear-min.webp"
+    ],
+    "artist": {
+      "username": "PixelTiger",
+      "profilePic": "avatar2-min.png"
+    }
+  },
+  {
+    "id": "92b31a67",
+    "collectionTitle": "Meta Zoo",
+    "imagesSrc": [
+      "/images/colorful-dog-min.webp",
+      "/images/trending/trending-mouse-min.webp",
+      "/images/trending/trending-colorful-bear-min.webp"
+    ],
+    "artist": {
+      "username": "ArtMancer",
+      "profilePic": "avatar3-min.png"
+    }
+  },
+  {
+    "id": "c104feaa",
+    "collectionTitle": "Digital Safari",
+    "imagesSrc": [
+      "/images/colorful-dog-min.webp",
+      "/images/trending/trending-mouse-min.webp",
+      "/images/trending/trending-colorful-bear-min.webp"
+    ],
+    "artist": {
+      "username": "ZebraKing",
+      "profilePic": "avatar4-min.png"
+    }
+  },
+  {
+    "id": "7df23b44",
+    "collectionTitle": "Virtual Paws",
+    "imagesSrc": [
+      "/images/colorful-dog-min.webp",
+      "/images/trending/trending-mouse-min.webp",
+      "/images/trending/trending-colorful-bear-min.webp"
+    ],
+    "artist": {
+      "username": "NekoByte",
+      "profilePic": "avatar5-min.png"
+    }
+  },
+  {
+    "id": "bf63ee10",
+    "collectionTitle": "Beast Bits",
+    "imagesSrc": [
+      "/images/colorful-dog-min.webp",
+      "/images/trending/trending-mouse-min.webp",
+      "/images/trending/trending-colorful-bear-min.webp"
+    ],
+    "artist": {
+      "username": "AlphaPunk",
+      "profilePic": "avatar7-min.png"
+    }
+  }
+]
