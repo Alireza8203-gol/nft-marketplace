@@ -5,7 +5,6 @@ export const useActiveClass = (e: MouseEvent) => {
       el.classList.remove("active");
     });
     target.classList.add("active");
-    console.log(target);
     return target.innerText;
   }
 };

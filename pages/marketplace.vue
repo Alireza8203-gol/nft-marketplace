@@ -40,26 +40,20 @@
       <div
         class="grid grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-3 gap-y-5 py-10 tablet:py-15 gap-x-7.5"
       >
-        <suspense>
-          <template #default>
-            <NFTinfoCard
-              :key="NFT.id"
-              variant="darker"
-              :nfts-info="NFT"
-              v-for="NFT in filteredNfts"
-              v-if="showingTab === 'NFTs'"
-            />
-            <TrendCollection
-              :key="index"
-              :collection-info="collection"
-              v-else-if="showingTab === 'Collections'"
-              v-for="(collection, index) in collectionsArray"
-            />
-          </template>
-          <template #fallback>
-            <div class="">Loading Top Subscribe NFT...</div>
-          </template>
-        </suspense>
+        <NFTinfoCard
+          :key="NFT.id"
+          variant="darker"
+          :nfts-info="NFT"
+          v-for="NFT in filteredNfts"
+          v-if="showingTab === 'NFTs' && nftApiCall.loading"
+        />
+        <TrendCollection
+          :key="index"
+          :collection-info="collection"
+          v-for="(collection, index) in collectionsArray"
+          v-else-if="showingTab === 'Collections' && trendingApi.loading"
+        />
+        <n-f-t-card-skeleton v-else />
       </div>
     </div>
   </section>
@@ -67,8 +61,9 @@
 
 <script setup lang="ts">
 import { useApiData } from "~/composables/useApiData";
-import type { CollectionInfo, NFTItem } from "~/types/Global";
 import { useActiveClass } from "~/composables/useActiveClass";
+import type { CollectionInfo, NFTItem } from "~/types/Global";
+import NFTCardSkeleton from "~/components/skeletons/NFTCardSkeleton.vue";
 
 const NFTinfoCard = defineAsyncComponent(
   () => import("@/components/NFTinfoCard.vue"),
@@ -89,9 +84,7 @@ const filteredNfts = computed(() => {
 });
 
 const addActiveClass = (e) => {
-  const chosenTab = useActiveClass(e) as string;
-  showingTab.value = chosenTab;
-  console.log(chosenTab);
+  showingTab.value = useActiveClass(e) as string;
 };
 
 onMounted(async () => {

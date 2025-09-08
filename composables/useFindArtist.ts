@@ -7,8 +7,8 @@ import { ref } from "vue";
 import type { ArtistInfo } from "~/types/Global";
 
 export const useFindArtist = (id: string) => {
-  const pending = ref(true);
   const error = ref<unknown>(null);
+  const pending = ref(true);
   const artist = ref<ArtistInfo | null>(null);
 
   axios
