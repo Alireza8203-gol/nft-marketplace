@@ -41,6 +41,7 @@ const props = defineProps({
         "/images/trending/trending-colorful-bear-min.png",
       ],
       artist: {
+        id: "",
         username: "default artist",
         profilePic: "avatar1.png",
       },

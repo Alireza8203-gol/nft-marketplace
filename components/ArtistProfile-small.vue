@@ -19,16 +19,4 @@ import type { ArtistInfo } from "~/types/Global";
 const props = defineProps<{
   artistInfo: ArtistInfo;
 }>();
-
-// const props = withDefaults(
-//   defineProps<{
-//     artistInfo: ArtistInfo;
-//   }>(),
-//   {
-//     artistInfo: () => ({
-//       username: "default artist",
-//       profilePic: "avatar1-min.png",
-//     }),
-//   },
-// );
 </script>

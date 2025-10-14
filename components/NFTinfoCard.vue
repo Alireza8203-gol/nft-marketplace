@@ -55,7 +55,7 @@
 
 <script setup lang="ts">
 import type { NFTItem } from "~/types/Global";
-import { useFindArtist } from "~/composables/useFindArtist";
+import { useFindArtistById } from "~/composables/useFindArtistById";
 
 const props = withDefaults(
   defineProps<{
@@ -67,7 +67,7 @@ const props = withDefaults(
   },
 );
 
-const { artist, pending, error } = useFindArtist(
+const { artist, pending, error } = useFindArtistById(
   props.nftsInfo?.creatorId || "",
 );
 </script>

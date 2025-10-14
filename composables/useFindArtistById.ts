@@ -6,7 +6,7 @@ import axios from "axios";
 import { ref } from "vue";
 import type { ArtistInfo } from "~/types/Global";
 
-export const useFindArtist = async (id: string) => {
+export const useFindArtistById = async (id: string) => {
   const error = ref<unknown>(null);
   const pending = ref(true);
   const artist = ref<ArtistInfo | null>(null);

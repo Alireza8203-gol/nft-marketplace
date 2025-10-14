@@ -1,6 +1,6 @@
 <template>
   <NuxtLink
-    to="/create-account"
+    :to="`/artists/${artist.id}`"
     class="relative flex desktop:flex-col items-center gap-x-5 gap-y-5 p-5 bg-secondary-dark rounded-2.5xl hover-class"
   >
     <div

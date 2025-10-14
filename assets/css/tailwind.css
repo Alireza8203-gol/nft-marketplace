@@ -14,7 +14,7 @@
 
 @layer components {
   .btn {
-    @apply flex items-center justify-center gap-x-3 w-full tablet:w-fit p-5 rounded-[20px] font-semibold text-base bg-pink hover:scale-95 transition-transform duration-300;
+    @apply flex items-center justify-center gap-x-3 w-full tablet:w-fit p-5 rounded-2.5xl font-semibold text-base bg-pink hover:scale-95 transition-transform duration-300;
   }
 
   .btn-sm {

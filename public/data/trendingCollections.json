@@ -8,7 +8,8 @@
       "/images/trending/trending-colorful-bear-min.webp"
     ],
     "artist": {
-      "username": "MrFox",
+      "username": "ZenNFTs",
+      "id": "8f6b3e1d9a2c547f",
       "profilePic": "avatar6-min.png"
     }
   },
@@ -21,7 +22,8 @@
       "/images/trending/trending-mushroom2-min.webp"
     ],
     "artist": {
-      "username": "Shroomie",
+      "id": "f47b21d9e8c305a1",
+      "username": "CryptoQueen",
       "profilePic": "avatar7-min.png"
     }
   },
@@ -34,7 +36,8 @@
       "/images/trending/trending-robot3-min.webp"
     ],
     "artist": {
-      "username": "BeKind2Robots",
+      "username": "AIVisions",
+      "id": "9f7d3b5c1e2a648f",
       "profilePic": "avatar15-min.png"
     }
   },
@@ -47,7 +50,8 @@
       "/images/trending/trending-colorful-bear-min.webp"
     ],
     "artist": {
-      "username": "LunaWolf",
+      "id": "3e9c5b7d1a2f648f",
+      "username": "VoxelKnight",
       "profilePic": "avatar1-min.png"
     }
   },
@@ -60,7 +64,8 @@
       "/images/trending/trending-colorful-bear-min.webp"
     ],
     "artist": {
-      "username": "PixelTiger",
+      "id": "4e8f9b7c1d6a2f53",
+      "username": "DreamPixel",
       "profilePic": "avatar2-min.png"
     }
   },
@@ -73,7 +78,8 @@
       "/images/trending/trending-colorful-bear-min.webp"
     ],
     "artist": {
-      "username": "ArtMancer",
+      "username": "Animakid",
+      "id": "a3f1b9e4c2d67f8a",
       "profilePic": "avatar3-min.png"
     }
   },
@@ -86,7 +92,8 @@
       "/images/trending/trending-colorful-bear-min.webp"
     ],
     "artist": {
-      "username": "ZebraKing",
+      "username": "CyberMuse",
+      "id": "5e8c3b7d1a2f649f",
       "profilePic": "avatar4-min.png"
     }
   },
@@ -99,7 +106,8 @@
       "/images/trending/trending-colorful-bear-min.webp"
     ],
     "artist": {
-      "username": "NekoByte",
+      "id": "7d9f6c3e1a2b548f",
+      "username": "BlockFrame",
       "profilePic": "avatar5-min.png"
     }
   },
@@ -112,7 +120,8 @@
       "/images/trending/trending-colorful-bear-min.webp"
     ],
     "artist": {
-      "username": "AlphaPunk",
+      "id": "f47b21d9e8c305a1",
+      "username": "CryptoQueen",
       "profilePic": "avatar7-min.png"
     }
   }
