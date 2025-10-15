@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col tablet:items-start items-center">
     <h4
-      class="font-bold font-spaceMono text-[22px] leading-160 desktop:text-[28px] desktop:leading-[1.4]"
+      class="font-bold font-spaceMono text-1.5xl leading-160 desktop:text-2.6xl desktop:leading-140"
     >
       {{ props.statusInfo }}
     </h4>
@@ -16,11 +16,11 @@ import type { StatusBoxProps } from "~/types/Global";
 
 const props: StatusBoxProps = defineProps({
   statusInfo: {
-    type: String,
+    type: [String, Number],
     default: "999K+",
   },
   statusTitle: {
-    type: String,
+    type: [String, Number],
     default: "Title",
   },
 });

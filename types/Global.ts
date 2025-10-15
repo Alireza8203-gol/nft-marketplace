@@ -8,6 +8,9 @@ export interface ArtistInfo {
   profilePic: string;
   totalSales: number;
   walletAddress: string;
+  nftsSold: number | string;
+  followers: number | string;
+  salesVolume: number | string;
 }
 
 export interface CollectionInfo {
@@ -25,31 +28,31 @@ export interface OpenSeaCollectionContract {
 }
 
 export interface OpenSeaCollection {
-  collection: string;
   name: string;
-  description: string;
-  image_url: string;
-  banner_image_url: string;
   owner: string;
-  safelist_status: Record<string, unknown>; // since it’s an object but not defined
-  category: string;
-  is_disabled: boolean;
   is_nsfw: boolean;
-  trait_offers_enabled: boolean;
-  collection_offers_enabled: boolean;
+  wiki_url: string;
+  category: string;
+  image_url: string;
+  collection: string;
+  description: string;
   opensea_url: string;
   project_url: string;
-  wiki_url: string;
   discord_url: string;
+  is_disabled: boolean;
   telegram_url: string;
+  banner_image_url: string;
   twitter_username: string;
   instagram_username: string;
+  trait_offers_enabled: boolean;
+  collection_offers_enabled: boolean;
   contracts: OpenSeaCollectionContract[];
+  safelist_status: Record<string, unknown>; // since it’s an object but not defined
 }
 
 export interface OpenSeaCollectionResponse {
-  collections: OpenSeaCollection[];
   next: string;
+  collections: OpenSeaCollection[];
 }
 
 export interface MenuItem {
@@ -59,8 +62,8 @@ export interface MenuItem {
 }
 
 export interface StatusObj {
-  info: string;
   title: string;
+  info: string | number;
 }
 
 export interface AnimatedGifProps {
@@ -69,8 +72,8 @@ export interface AnimatedGifProps {
 }
 
 export interface StatusBoxProps {
-  statusInfo: string;
-  statusTitle: string;
+  statusInfo: string | number;
+  statusTitle: string | number;
 }
 
 export interface CButtonProps {

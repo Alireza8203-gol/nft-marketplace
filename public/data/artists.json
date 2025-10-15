@@ -14,7 +14,10 @@
       "m3n4o5p6",
       "q7r8s9t0",
       "u1v2w3x4"
-    ]
+    ],
+    "salesVolume": 42890,
+    "nftsSold": 312,
+    "followers": 9865
   },
   {
     "id": "f47b21d9e8c305a1",
@@ -28,7 +31,10 @@
       "y5z6a7b8",
       "c9d0e1f2",
       "g3h4i5j6"
-    ]
+    ],
+    "salesVolume": 37200,
+    "nftsSold": 256,
+    "followers": 9420
   },
   {
     "id": "9c1f6b3e7a2d548f",
@@ -43,7 +49,10 @@
       "o1p2q3r4",
       "s5t6u7v8",
       "i1j2k3l4"
-    ]
+    ],
+    "salesVolume": 28970,
+    "nftsSold": 211,
+    "followers": 7352
   },
   {
     "id": "4e8f9b7c1d6a2f53",
@@ -56,7 +65,10 @@
     "nfts": [
       "w9x0y1z2",
       "a3b4c5d6"
-    ]
+    ],
+    "salesVolume": 19830,
+    "nftsSold": 134,
+    "followers": 6628
   },
   {
     "id": "7d9f6c3e1a2b548f",
@@ -68,7 +80,10 @@
     "totalSales": 50.12,
     "nfts": [
       "q9r0s1t2"
-    ]
+    ],
+    "salesVolume": 24760,
+    "nftsSold": 112,
+    "followers": 5830
   },
   {
     "id": "6b3e1d9f7a2c548f",
@@ -78,7 +93,10 @@
     "bio": "Fusing high fashion with blockchain technology.",
     "walletAddress": "0x54321abcdef6789",
     "totalSales": 62.45,
-    "nfts": []
+    "nfts": [],
+    "salesVolume": 33010,
+    "nftsSold": 98,
+    "followers": 7644
   },
   {
     "id": "2d9f6c3e1a7b548f",
@@ -88,7 +106,10 @@
     "bio": "Building futuristic NFT holograms.",
     "walletAddress": "0xaabbccddeeff1122",
     "totalSales": 41.09,
-    "nfts": []
+    "nfts": [],
+    "salesVolume": 21400,
+    "nftsSold": 121,
+    "followers": 6142
   },
   {
     "id": "8f6b3e1d9a2c547f",
@@ -100,7 +121,10 @@
     "totalSales": 28.76,
     "nfts": [
       "y7z8a9b0"
-    ]
+    ],
+    "salesVolume": 17690,
+    "nftsSold": 87,
+    "followers": 5034
   },
   {
     "id": "1c7e5b3d9a2f648f",
@@ -110,7 +134,10 @@
     "bio": "Street art meets digital ownership.",
     "walletAddress": "0x9988776655443322",
     "totalSales": 33.91,
-    "nfts": []
+    "nfts": [],
+    "salesVolume": 19920,
+    "nftsSold": 76,
+    "followers": 4801
   },
   {
     "id": "5e8c3b7d1a2f649f",
@@ -120,7 +147,10 @@
     "bio": "Reimagining classical art with AI-powered NFTs.",
     "walletAddress": "0x1122334455667788",
     "totalSales": 55.63,
-    "nfts": []
+    "nfts": [],
+    "salesVolume": 30580,
+    "nftsSold": 152,
+    "followers": 8203
   },
   {
     "id": "3e9c5b7d1a2f648f",
@@ -132,7 +162,10 @@
     "totalSales": 42.15,
     "nfts": [
       "u3v4w5x6"
-    ]
+    ],
+    "salesVolume": 22210,
+    "nftsSold": 106,
+    "followers": 6038
   },
   {
     "id": "9f7d3b5c1e2a648f",
@@ -142,7 +175,10 @@
     "bio": "Exploring AI-generated digital masterpieces.",
     "walletAddress": "0x7766554433221100",
     "totalSales": 36.79,
-    "nfts": []
+    "nfts": [],
+    "salesVolume": 18450,
+    "nftsSold": 92,
+    "followers": 5627
   },
   {
     "id": "6e9f3b5d1a2c748f",
@@ -155,7 +191,10 @@
     "nfts": [
       "e7f8g9h0",
       "m5n6o7p8"
-    ]
+    ],
+    "salesVolume": 25890,
+    "nftsSold": 185,
+    "followers": 7119
   },
   {
     "id": "4d9f7b3c1e2a658f",
@@ -165,7 +204,10 @@
     "bio": "Bringing nature to life with digital pixels.",
     "walletAddress": "0xff00112233445566",
     "totalSales": 31.12,
-    "nfts": []
+    "nfts": [],
+    "salesVolume": 16720,
+    "nftsSold": 69,
+    "followers": 4563
   },
   {
     "id": "2d6f9b3e1a7c548f",
@@ -175,7 +217,10 @@
     "bio": "Experimenting with glitch aesthetics in NFTs.",
     "walletAddress": "0x9988776655441122",
     "totalSales": 39.45,
-    "nfts": []
+    "nfts": [],
+    "salesVolume": 19260,
+    "nftsSold": 88,
+    "followers": 5091
   },
   {
     "id": "e617e9ed-f433-4578-8b35-fb3ccae3fe27",
@@ -186,7 +231,10 @@
     "username": "Sahoooriii1998",
     "profilePic": "",
     "totalSales": 0,
-    "walletAddress": ""
+    "walletAddress": "",
+    "salesVolume": 8100,
+    "nftsSold": 15,
+    "followers": 430
   },
   {
     "id": "60dfc39bf3adae55",
@@ -197,7 +245,10 @@
     "username": "Karim1999",
     "profilePic": "",
     "totalSales": 0,
-    "walletAddress": ""
+    "walletAddress": "",
+    "salesVolume": 6520,
+    "nftsSold": 9,
+    "followers": 322
   },
   {
     "id": "117b45627fe5ad91",
@@ -208,7 +259,10 @@
     "username": "alireza8203",
     "profilePic": "",
     "totalSales": 0,
-    "walletAddress": ""
+    "walletAddress": "",
+    "salesVolume": 7450,
+    "nftsSold": 14,
+    "followers": 380
   },
   {
     "id": "dc0372912dc94223",
@@ -219,7 +273,10 @@
     "username": "Bitch89898",
     "profilePic": "",
     "totalSales": 0,
-    "walletAddress": ""
+    "walletAddress": "",
+    "salesVolume": 5810,
+    "nftsSold": 7,
+    "followers": 295
   },
   {
     "id": "fd49592b3034cd8c",
@@ -230,7 +287,10 @@
     "username": "sahoori800",
     "profilePic": "",
     "totalSales": 0,
-    "walletAddress": ""
+    "walletAddress": "",
+    "salesVolume": 7930,
+    "nftsSold": 16,
+    "followers": 351
   },
   {
     "id": "e52cc9c683e0287f",
@@ -241,7 +301,10 @@
     "username": "alirereza2893",
     "profilePic": "",
     "totalSales": 0,
-    "walletAddress": ""
+    "walletAddress": "",
+    "salesVolume": 6300,
+    "nftsSold": 11,
+    "followers": 312
   },
   {
     "id": "1b1a5c794eafac9a",
@@ -252,7 +315,10 @@
     "username": "please2882",
     "profilePic": "",
     "totalSales": 0,
-    "walletAddress": ""
+    "walletAddress": "",
+    "salesVolume": 5220,
+    "nftsSold": 8,
+    "followers": 277
   },
   {
     "id": "e467880d79adf098",
@@ -263,7 +329,10 @@
     "username": "bloodyHell666",
     "profilePic": "",
     "totalSales": 0,
-    "walletAddress": ""
+    "walletAddress": "",
+    "salesVolume": 5870,
+    "nftsSold": 12,
+    "followers": 298
   },
   {
     "id": "46126a88f7327152",
@@ -274,7 +343,10 @@
     "username": "harryPotter9",
     "profilePic": "",
     "totalSales": 0,
-    "walletAddress": ""
+    "walletAddress": "",
+    "salesVolume": 7110,
+    "nftsSold": 14,
+    "followers": 334
   },
   {
     "id": "87cc52f21f747bec",
@@ -285,7 +357,10 @@
     "username": "buddy2",
     "profilePic": "",
     "totalSales": 0,
-    "walletAddress": ""
+    "walletAddress": "",
+    "salesVolume": 6650,
+    "nftsSold": 10,
+    "followers": 310
   },
   {
     "id": "110fa21060bf0d40",
@@ -296,6 +371,9 @@
     "username": "bitch999",
     "profilePic": "",
     "totalSales": 0,
-    "walletAddress": ""
+    "walletAddress": "",
+    "salesVolume": 5340,
+    "nftsSold": 6,
+    "followers": 268
   }
 ]

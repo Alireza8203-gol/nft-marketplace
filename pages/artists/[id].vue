@@ -1,12 +1,15 @@
 <template>
   <section>
+    <!-- Artist's Banner -->
     <div
       class="artist-banner relative flex items-end justify-center tablet:justify-start min-h-62.5 -z-10"
     >
-      <!--class="gradient-cover absolute  size-full z-10" mb-22.5-->
+      <!-- Gradiant Overlay -->
       <div class="gradient-cover absolute size-full"></div>
     </div>
+    <!-- Artist's Details -->
     <div class="container">
+      <!-- Artist's Avatar -->
       <div
         class="size-30 border-2 -mt-17.5 mx-auto tablet:mx-0 border-primary-dark rounded-2.5xl overflow-hidden z-50"
       >
@@ -18,6 +21,7 @@
           "
         />
       </div>
+      <!-- Artist's Name -->
       <div
         class="flex flex-col desktop:flex-row items-start desktop:items-center justify-start desktop:justify-between gap-y-7.5 w-full mt-7.5"
       >
@@ -40,16 +44,18 @@
           </button>
         </div>
       </div>
+      <!-- Artist's Status -->
       <div
-        class="grid w-full grid-cols-3 items-start justify-between gap-x-7.5 my-7.5"
+        class="grid grid-cols-3 tablet:grid-cols-4 desktop:grid-cols-5 items-start gap-x-7.5 my-7.5"
       >
         <StatusBox
           :key="index"
           :status-info="item.info"
           :status-title="item.title"
-          v-for="(item, index) in status"
+          v-for="(item, index) in artistStatus"
         />
       </div>
+      <!-- Bio -->
       <div>
         <span
           class="mb-2.5 font-spaceMono tablet:font-bold text-base tablet:text-1.5xl leading-140 tablet:leading-160 text-custom-gray"
@@ -60,12 +66,14 @@
           {{ artistInfo?.bio }}
         </p>
       </div>
+      <!-- Social Media -->
       <div class="mt-7.5">
         <span
           class="mb-2.5 font-spaceMono tablet:font-bold text-base tablet:text-1.5xl leading-140 tablet:leading-160 text-custom-gray"
         >
           Links
         </span>
+        <!-- Social Media Logos -->
         <div class="flex items-center justify-start gap-x-2.5">
           <nuxt-img
             class="size-6 desktop:size-8"
@@ -85,6 +93,11 @@
           />
         </div>
       </div>
+      <!-- Artist's NFTs -->
+      <div class="grid grid-cols-2 grid-rows-1 mt-10">
+        <div class="filtering active" @click="addActiveClass">NFTs</div>
+        <div class="filtering" @click="addActiveClass">Collections</div>
+      </div>
     </div>
   </section>
 </template>
@@ -92,22 +105,31 @@
 <script setup lang="ts">
 import type { ArtistInfo, StatusObj } from "~/types/Global";
 import { useFindArtistById } from "~/composables/useFindArtistById";
-import { useApiData } from "~/composables/useApiData";
 
 const route = useRoute();
 const id = route.params.id;
 const loading = ref<boolean>(true);
-const status = ref<StatusObj[]>([]);
+const artistStatus = ref<StatusObj[]>([]);
 const artistInfo = ref<ArtistInfo | null>(null);
-const statusApi = useApiData<StatusObj[]>("/api/status");
 
 onMounted(async () => {
   const { artist, pending } = await useFindArtistById(id as string);
   artistInfo.value = artist.value;
   loading.value = pending.value;
-
-  await statusApi.fetchData();
-  status.value = statusApi.data.value as StatusObj[];
+  artistStatus.value = [
+    {
+      title: "Volume",
+      info: artistInfo.value?.salesVolume,
+    },
+    {
+      title: "NFTs Sold",
+      info: artistInfo.value?.nftsSold,
+    },
+    {
+      title: "Followers",
+      info: artistInfo.value?.followers,
+    },
+  ];
 });
 </script>
 
