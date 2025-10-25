@@ -44,7 +44,7 @@ const userAuth = useAuthStore();
 const windowStore = useWindowStore();
 const menuItems = ref<MenuItem[]>([]);
 const width = computed(() => windowStore.width > 1110);
-const menuApi = useApiData<MenuItem[]>("http://localhost:4000/api/menuItems");
+const menuApi = useApiData<MenuItem[]>(`/api/menuItems`);
 
 const openMenu = () => {
   drawerRef.value?.open();
