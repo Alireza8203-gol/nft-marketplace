@@ -16,7 +16,7 @@ export default defineNuxtConfig({
   },
   ssr: true,
   nitro: {
-    preset: "node", // this is key for Liara!
+    preset: "vercel", // this is key for Liara!
   },
   colorMode: {
     fallback: "light", // fallback value if not system preference found
