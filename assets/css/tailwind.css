@@ -71,7 +71,7 @@
   }
 
   .filtering {
-    @apply flex items-center justify-center py-5 text-base font-semibold desktop:py-3.75 desktop:text-1.5xl leading-140 text-custom-gray;
+    @apply flex items-center justify-center w-full py-5 text-base font-semibold desktop:py-3.75 desktop:text-1.5xl leading-140 text-custom-gray;
   }
 
   /*background: linear-gradient(*/

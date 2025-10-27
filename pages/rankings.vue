@@ -19,18 +19,7 @@
   </section>
   <section>
     <div class="container">
-      <div class="grid grid-cols-4 grid-rows-1">
-        <div class="filtering active" @click="useActiveClass">
-          {{ windowStore.width < 750 ? "1d" : "Today" }}
-        </div>
-        <div class="filtering" @click="useActiveClass">
-          {{ windowStore.width < 750 ? "7d" : "This Week" }}
-        </div>
-        <div class="filtering" @click="useActiveClass">
-          {{ windowStore.width < 750 ? "30d" : "This Month" }}
-        </div>
-        <div class="filtering" @click="useActiveClass">All Time</div>
-      </div>
+      <FilteringTabs :tabs="tabs" />
     </div>
   </section>
   <section>
@@ -99,6 +88,12 @@ import { useActiveClass } from "~/composables/useActiveClass";
 const windowStore = useWindowStore();
 const artistsArray = ref<ArtistInfo[] | []>([]);
 const artistsApi = useApiData<ArtistInfo[]>("/api/artists");
+const tabs = [
+  windowStore.width < 750 ? "1d" : "Today",
+  windowStore.width < 750 ? "7d" : "This Week",
+  windowStore.width < 750 ? "30d" : "This Month",
+  "All Time",
+];
 
 onMounted(async () => {
   await artistsApi.fetchData();

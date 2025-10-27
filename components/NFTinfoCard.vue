@@ -27,7 +27,7 @@
         <div v-else-if="pending" class="text-sm text-gray-400">
           Loading artist...
         </div>
-        <div v-else-if="error" class="text-sm text-red-400">
+        <div v-else-if="error || !artist" class="text-sm text-red-400">
           Error loading artist
         </div>
       </div>
@@ -67,7 +67,7 @@ const props = withDefaults(
   },
 );
 
-const { artist, pending, error } = useFindArtistById(
+const { artist, pending, error } = await useFindArtistById(
   props.nftsInfo?.creatorId || "",
 );
 </script>

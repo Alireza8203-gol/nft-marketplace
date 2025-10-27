@@ -94,27 +94,32 @@
         </div>
       </div>
       <!-- Artist's NFTs -->
-      <div class="grid grid-cols-2 grid-rows-1 mt-10">
-        <div class="filtering active" @click="addActiveClass">NFTs</div>
-        <div class="filtering" @click="addActiveClass">Collections</div>
-      </div>
+      <filtering-tabs :tabs="tabs" />
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-import type { ArtistInfo, StatusObj } from "~/types/Global";
+import { useFindNFTById } from "~/composables/useFindNFTById";
+import type { ArtistInfo, NFTItem, StatusObj } from "~/types/Global";
 import { useFindArtistById } from "~/composables/useFindArtistById";
 
 const route = useRoute();
 const id = route.params.id;
 const loading = ref<boolean>(true);
 const artistStatus = ref<StatusObj[]>([]);
+const nftsInfo = ref<NFTItem[] | null>(null);
 const artistInfo = ref<ArtistInfo | null>(null);
+const tabs = ["Created", "Owned", "Collection"];
+
+// const getArtistsNFTs = (nftsIdArray: string[]) => {};
 
 onMounted(async () => {
   const { artist, pending } = await useFindArtistById(id as string);
   artistInfo.value = artist.value;
+  const { nfts } = await useFindNFTById(artistInfo.value.nfts);
+  console.log(nfts.value);
+  // nftsInfo.value = nfts.value;
   loading.value = pending.value;
   artistStatus.value = [
     {

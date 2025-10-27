@@ -29,10 +29,7 @@
           name="heroicons:magnifying-glass-20-solid"
         />
       </div>
-      <div class="grid grid-cols-2 grid-rows-1">
-        <div class="filtering active" @click="addActiveClass">NFTs</div>
-        <div class="filtering" @click="addActiveClass">Collections</div>
-      </div>
+      <FilteringTabs :tabs="tabs" @update:showingTab="updateShowingTab" />
     </div>
   </section>
   <section class="border-b-2 bg-secondary-dark border-b-primary-dark">
@@ -61,7 +58,6 @@
 
 <script setup lang="ts">
 import { useApiData } from "~/composables/useApiData";
-import { useActiveClass } from "~/composables/useActiveClass";
 import type { CollectionInfo, NFTItem } from "~/types/Global";
 import NFTCardSkeleton from "~/components/skeletons/NFTCardSkeleton.vue";
 
@@ -70,6 +66,7 @@ const NFTinfoCard = defineAsyncComponent(
 );
 
 const searchQuery = ref<string>("");
+const tabs = ["NFTs", "Collections"];
 const showingTab = ref<string>("NFTs");
 const nftsArray = ref<NFTItem[] | []>([]);
 const collectionsArray = ref<CollectionInfo[] | []>([]);
@@ -83,8 +80,8 @@ const filteredNfts = computed(() => {
   });
 });
 
-const addActiveClass = (e) => {
-  showingTab.value = useActiveClass(e) as string;
+const updateShowingTab = (value: string) => {
+  showingTab.value = value;
 };
 
 onMounted(async () => {
