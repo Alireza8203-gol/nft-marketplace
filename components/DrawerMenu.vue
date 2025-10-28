@@ -40,7 +40,7 @@
           v-for="menuItem in menuItems"
           class="flex flex-shrink items-center justify-center px-5 py-3"
         >
-          <NuxtLink :to="menuItem.path" class="text-2.3xl">
+          <NuxtLink :to="menuItem.path" class="text-2.3xl" @click="toggleMenu">
             {{ menuItem.title }}
           </NuxtLink>
         </li>

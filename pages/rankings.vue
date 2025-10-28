@@ -50,7 +50,10 @@
           >
             {{ index + 1 }}
           </div>
-          <div class="flex items-center justify-start gap-x-3 desktop:gap-x-5">
+          <nuxt-link
+            :to="`/artists/${artist.id}`"
+            class="flex items-center justify-start gap-x-3 desktop:gap-x-5"
+          >
             <div>
               <nuxt-img
                 :src="`/images/avatars/${artist.profilePic || 'default-profile-pic.jpg'}`"
@@ -62,7 +65,7 @@
             >
               {{ artist.username }}
             </h5>
-          </div>
+          </nuxt-link>
         </template>
         <template #right>
           <div class="tablet:block hidden desktop:w-40 w-25 text-custom-green">

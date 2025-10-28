@@ -97,6 +97,20 @@
       <filtering-tabs :tabs="tabs" />
     </div>
   </section>
+  <section class="border-b-2 bg-secondary-dark border-b-primary-dark">
+    <div class="container">
+      <div
+        class="grid grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-3 gap-y-5 py-10 tablet:py-15 gap-x-7.5"
+      >
+        <NFTinfoCard
+          :key="NFT.id"
+          variant="darker"
+          :nfts-info="NFT"
+          v-for="NFT in nftsInfo"
+        />
+      </div>
+    </div>
+  </section>
 </template>
 
 <script setup lang="ts">
@@ -107,6 +121,7 @@ import { useFindArtistById } from "~/composables/useFindArtistById";
 const route = useRoute();
 const id = route.params.id;
 const loading = ref<boolean>(true);
+const loadingNFTs = ref<boolean>(true);
 const artistStatus = ref<StatusObj[]>([]);
 const nftsInfo = ref<NFTItem[] | null>(null);
 const artistInfo = ref<ArtistInfo | null>(null);
@@ -118,9 +133,10 @@ onMounted(async () => {
   const { artist, pending } = await useFindArtistById(id as string);
   artistInfo.value = artist.value;
   const { nfts } = await useFindNFTById(artistInfo.value.nfts);
-  console.log(nfts.value);
-  // nftsInfo.value = nfts.value;
+  nftsInfo.value = nfts.value;
+  console.log(nftsInfo.value);
   loading.value = pending.value;
+  loadingNFTs.value = pending.value;
   artistStatus.value = [
     {
       title: "Volume",

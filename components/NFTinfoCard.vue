@@ -8,17 +8,17 @@
       },
     ]"
   >
-    <div>
+    <nuxt-link :to="`/nfts/${props.nftsInfo?.id}`">
       <NuxtImg
         :alt="`${props.nftsInfo?.name}`"
         :src="`/images/${props.nftsInfo?.image}`"
       />
-    </div>
+    </nuxt-link>
     <div
       class="flex flex-col items-start justify-center p-5 tablet:px-7.5 gap-y-6.25"
     >
       <div class="flex flex-col items-start justify-center gap-y-1.25">
-        <nuxt-link :to="`/artists/${props.nftsInfo?.id}`">
+        <nuxt-link :to="`/nfts/${props.nftsInfo?.id}`">
           <h5 class="font-semibold text-1.5xl leading-140">
             {{ nftsInfo?.name }}
           </h5>

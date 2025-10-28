@@ -21,10 +21,10 @@ export const useFindNFTById = async (nftIds: string[]) => {
   // }
 
   try {
-    const responses = await Promise.all([
+    const responses = await Promise.all(
       nftIds.map((id) => axios.get(`/api/nfts/${id}`)),
-    ]);
-    nfts.value = responses.map((res) => res.value.data);
+    );
+    nfts.value = responses.map((res) => res.data);
   } catch (err) {
     error.value = err;
   } finally {
