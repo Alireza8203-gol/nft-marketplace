@@ -25,11 +25,11 @@
       <div
         class="flex flex-col desktop:flex-row items-start desktop:items-center justify-start desktop:justify-between gap-y-7.5 w-full mt-7.5"
       >
-        <h4
+        <h2
           class="font-semibold text-2.6xl tablet:text-4.2xl desktop:text-5.1xl leading-140 tablet:leading-tight desktop:leading-extra-tight"
         >
           {{ artistInfo?.name }}
-        </h4>
+        </h2>
         <div class="flex flex-col tablet:flex-row gap-5 w-full desktop:w-fit">
           <button class="btn btn-primary">
             <Icon
@@ -99,6 +99,11 @@
   </section>
   <section class="border-b-2 bg-secondary-dark border-b-primary-dark">
     <div class="container">
+      <div v-if="nftsInfo?.length > 0">
+        <p class="text-base desktop:text-1.5xl leading-140 desktop:leading-160">
+          Nothing Yet! :)
+        </p>
+      </div>
       <div
         class="grid grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-3 gap-y-5 py-10 tablet:py-15 gap-x-7.5"
       >

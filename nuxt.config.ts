@@ -15,9 +15,9 @@ export default defineNuxtConfig({
     port: 4000,
   },
   ssr: true,
-  nitro: {
-    preset: "vercel", // this is key for Liara!
-  },
+  // nitro: {
+  //   preset: "vercel", // this is key for Liara!
+  // },
   colorMode: {
     fallback: "light", // fallback value if not system preference found
     preference: "dark", // default value of $colorMode.preference. could be system as well

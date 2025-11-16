@@ -3,36 +3,41 @@
     class="flex w-full flex-col items-center justify-center text-white glass-effect gap-y-2.5 p-7.5 rounded-2.5xl"
   >
     <p class="self-start text-xs leading-extra-tight">Auction ends in:</p>
-    <div class="flex items-start gap-x-2.5 font-spaceMono">
+    <div class="flex items-start gap-x-2.5 mb-7.5 font-spaceMono">
       <div class="flex flex-col items-center justify-start">
-        <h3 class="countdown-number">{{ days }}</h3>
+        <h3 class="countdown-number">{{ props.date.days }}</h3>
         <p class="countdown-number-caption">Days</p>
       </div>
       <h4 class="colon">:</h4>
       <div class="flex flex-col items-center justify-start">
-        <h3 class="countdown-number">{{ hours }}</h3>
+        <h3 class="countdown-number">{{ props.date.hours }}</h3>
         <p class="countdown-number-caption">Hours</p>
       </div>
       <h4 class="colon">:</h4>
       <div class="flex flex-col items-center justify-start">
-        <h3 class="countdown-number">{{ minutes }}</h3>
+        <h3 class="countdown-number">{{ props.date.minutes }}</h3>
         <p class="countdown-number-caption">Minutes</p>
       </div>
       <h4 class="colon">:</h4>
       <div class="flex flex-col items-center justify-start">
-        <h3 class="countdown-number">{{ seconds }}</h3>
+        <h3 class="countdown-number">{{ props.date.seconds }}</h3>
         <p class="countdown-number-caption">Seconds</p>
       </div>
     </div>
+    <slot />
   </div>
 </template>
 
 <script setup lang="ts">
-import { useCountdown } from "@/composables/useCountdown";
-
-const { days, hours, minutes, seconds, isEnded } = useCountdown(
-  new Date("2025-06-01T00:00:00").getTime(),
-);
+const props = defineProps<{
+  date: {
+    days: globalThis.Ref<number, number>;
+    hours: globalThis.Ref<number, number>;
+    minutes: globalThis.Ref<number, number>;
+    seconds: globalThis.Ref<number, number>;
+    isEnded: globalThis.Ref<boolean, boolean>;
+  };
+}>();
 </script>
 
 <style scoped>

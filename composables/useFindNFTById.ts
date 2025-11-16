@@ -7,22 +7,13 @@ import { ref } from "vue";
 import type { NFTItem } from "~/types/Global";
 
 export const useFindNFTById = async (nftIds: string[]) => {
-  const pending = ref(true);
+  const pending = ref<boolean>(true);
   const error = ref<unknown>(null);
   const nfts = ref<NFTItem[] | []>([]);
 
-  // try {
-  //   const { data } = await axios.get(`/api/nfts/${id}`);
-  //   nft.value = data;
-  // } catch (err) {
-  //   error.value = err;
-  // } finally {
-  //   pending.value = false;
-  // }
-
   try {
     const responses = await Promise.all(
-      nftIds.map((id) => axios.get(`/api/nfts/${id}`)),
+      nftIds.map((id: string) => axios.get(`/api/nfts/${id}`)),
     );
     nfts.value = responses.map((res) => res.data);
   } catch (err) {

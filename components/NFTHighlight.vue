@@ -26,7 +26,7 @@
           <div
             class="flex tablet:flex-row flex-col items-end justify-stretch gap-7.5"
           >
-            <CountdownClock />
+            <CountdownClock :date="countDownData" />
             <CButton
               link-to="/"
               caption="See NFT"
@@ -42,10 +42,14 @@
 </template>
 
 <script setup lang="ts">
+import { useCountdown } from "@/composables/useCountdown";
+
 const artistInfo = {
   username: "Shroomie",
   profilePic: "avatar7-min.png",
 };
+
+const countDownData = useCountdown(new Date("2026-06-01T00:00:00").getTime());
 </script>
 
 <style scoped>
