@@ -70,8 +70,11 @@ export default defineEventHandler(async (event: H3Event) => {
     nfts: [],
     email,
     username,
-    profilePic: "",
+    nftsSold: "",
+    followers: "",
     totalSales: 0,
+    profilePic: "",
+    salesVolume: "",
     walletAddress: "",
   };
 

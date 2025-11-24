@@ -13,11 +13,22 @@ export default defineNuxtConfig({
   ],
   devServer: {
     port: 4000,
+    // host: "0.0.0.0",
   },
   ssr: true,
-  // nitro: {
-  //   preset: "vercel", // this is key for Liara!
-  // },
+  nitro: {
+    routeRules: {
+      "/api/**": {
+        cors: true,
+      },
+    },
+    // preset: "vercel",
+  },
+  runtimeConfig: {
+    public: {
+      apiBaseURL: "./",
+    },
+  },
   colorMode: {
     fallback: "light", // fallback value if not system preference found
     preference: "dark", // default value of $colorMode.preference. could be system as well
