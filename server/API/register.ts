@@ -26,7 +26,7 @@ export default defineEventHandler(async (event: H3Event) => {
     );
   }
 
-  const filePath = join(process.cwd(), "data", "artists.json");
+  const filePath = join(process.cwd(), "public", "data", "artists.json");
   let artists: ArtistInfo[] = [];
 
   try {

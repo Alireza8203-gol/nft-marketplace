@@ -34,6 +34,7 @@ const trendingApi = useApiData<CollectionInfo[]>("/api/collections");
 
 onMounted(async () => {
   await trendingApi.fetchData();
+  console.log(trendingApi.data.value);
   trendingCollections.value = trendingApi.data.value?.slice(
     0,
     3,

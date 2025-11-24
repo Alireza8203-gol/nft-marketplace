@@ -375,5 +375,19 @@
     "salesVolume": 5340,
     "nftsSold": 6,
     "followers": 268
+  },
+  {
+    "id": "f829e4c3998cc20d",
+    "bio": "",
+    "name": "",
+    "nfts": [],
+    "email": "jyxux@mailinator.com",
+    "username": "Quiadoloremqueest",
+    "nftsSold": "",
+    "followers": "",
+    "totalSales": 0,
+    "profilePic": "",
+    "salesVolume": "",
+    "walletAddress": ""
   }
 ]
